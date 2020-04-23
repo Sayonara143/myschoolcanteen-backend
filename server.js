@@ -9,8 +9,8 @@ import  mainRouter from './app/routers/router'
 // import usersRouter from './routes/users'mongodb://localhost:27017/myschoolcanteen
 import mongoose  from 'mongoose'
 import cors from 'cors'
-
-mongoose.connect("mongodb://localhost:27017/myschoolcanteen", { useNewUrlParser: true, useUnifiedTopology: true },  () => {
+const uri = "mongodb+srv://AlexBykov:alexbykov123school@myschoolcanteen-dan2k.mongodb.net/myschoolcanteen?retryWrites=true&w=majority"
+mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true  },  () => {
 	console.log("[MONGODB] connect")
 })
 

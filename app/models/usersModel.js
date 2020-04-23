@@ -45,6 +45,10 @@ var usersModel = new Schema({
         type:String,
         required:true,
     },
+    path:{
+        type:String,
+        default:"./public/image/user_small.png"
+    },
 	date: {
 		type: Date,
 		default: Date.now
@@ -79,7 +83,7 @@ const findUserByLogin = (login) => {
     return UsersModel.findOne({login: login}, {});
 }
 const findAllUsers = (admin) =>{
-    return UsersModel.find({admin: admin},{__v:0})
+    return UsersModel.find({admin: admin},{__v:0, passwordHash:0,salt:0})
 }
 const deleteUserByLogin =(login)=>{
     return UsersModel.deleteOne({login: login},{});
