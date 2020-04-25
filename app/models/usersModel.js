@@ -47,7 +47,7 @@ var usersModel = new Schema({
     },
     path:{
         type:String,
-        default:"./public/image/user_small.png"
+        default:"image/usersmall.png"
     },
 	date: {
 		type: Date,

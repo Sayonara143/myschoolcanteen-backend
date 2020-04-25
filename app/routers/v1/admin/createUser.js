@@ -15,7 +15,7 @@ function hashPromise(hashingData) {
 }
 
 const checkInput = (input) => {
-    if (input.name === null || input.login === null || input.surname === null ||  input.patronymic === null ||  input.numberPhone === null || input.admin === null) {
+    if (input.name === null || input.login === null || input.surname === null ||  input.patronymic === null ||  input.numberPhone === null ) {
         return false;
 
     }
@@ -25,13 +25,14 @@ const checkInput = (input) => {
 
 router.post('/', async (req, res)=>{
     data = req.body
+    admin =req.admin.login
     if(!checkInput(data)){
         res.sendstatus(400)
         return 
     } 
 
 
-    const { name, surname, patronymic, login, password, ticket, admin, numberPhone} = data
+    const { name, surname, patronymic, login, password, ticket, numberPhone} = data
 
     try {
         const user = await UsersModelAPI.findUserByLogin(login)
