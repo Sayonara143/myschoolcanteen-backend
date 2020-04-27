@@ -25,7 +25,7 @@ const checkInput = (input) => {
 
 router.post('/', async (req, res)=>{
     data = req.body
-    admin =req.admin.login
+    const admin =req.admin.login
     if(!checkInput(data)){
         res.sendstatus(400)
         return 

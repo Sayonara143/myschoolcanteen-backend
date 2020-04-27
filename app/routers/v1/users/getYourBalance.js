@@ -7,7 +7,8 @@ const router = express.Router();
 
 router.get('/', async (req,res) => {
     const user = req.user;
-    res.json(user.balance);
+    let object = {balance: user.balance, name: user.name}
+    res.json(object);
 });
 
 
