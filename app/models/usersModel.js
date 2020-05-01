@@ -49,6 +49,10 @@ var usersModel = new Schema({
         type:String,
         default:"image/usersmall.png"
     },
+    email:{
+        type:String,
+        default: "Отсутствует"
+    },
 	date: {
 		type: Date,
 		default: Date.now
