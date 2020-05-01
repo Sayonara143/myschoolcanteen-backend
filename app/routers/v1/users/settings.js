@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.get('/', async (req,res) => {
-    data = req.user
+    const data = req.user
     const name = data.name;
     const surname = data.name;
     const patronymic = data.name;
