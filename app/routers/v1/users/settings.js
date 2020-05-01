@@ -7,10 +7,10 @@ const router = express.Router();
 router.get('/', async (req,res) => {
     const data = req.user
     const name = data.name;
-    const surname = data.name;
-    const patronymic = data.name;
+    const surname = data.surname;
+    const patronymic = data.patronymic;
     const email = data.email;
-    const phone = data.name;
+    const phone = data.numberPhone;
     const path = data.path;
     const object = {name: name, surname: surname, patronymic: patronymic, email: email, phone: phone, path: path};
     res.json(object)
