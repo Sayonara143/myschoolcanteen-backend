@@ -14,7 +14,10 @@ var calendarFood = new Schema({
         summa:{
             type:String,
             default:''
-
+        },
+        grams:{
+            type:String,
+            default:""
         }
     },
     two:{
@@ -24,7 +27,10 @@ var calendarFood = new Schema({
         summa:{
             type:String,
             default:''
-
+        },
+        grams:{
+            type:String,
+            default:""
         }
     },
     three:{
@@ -34,7 +40,10 @@ var calendarFood = new Schema({
         summa:{
             type:String,
             default:''
-
+        },
+        grams:{
+            type:String,
+            default:""
         }
     },
     four:{
@@ -44,7 +53,10 @@ var calendarFood = new Schema({
         summa:{
             type:String,
             default:''
-
+        },
+        grams:{
+            type:String,
+            default:""
         }
     },
     five:{
@@ -54,7 +66,10 @@ var calendarFood = new Schema({
         summa:{
             type:String,
             default:''
-
+        },
+        grams:{
+            type:String,
+            default:""
         }
     },
     six:{
@@ -63,7 +78,10 @@ var calendarFood = new Schema({
         summa:{
             type:String,
             default:''
-
+        },
+        grams:{
+            type:String,
+            default:""
         }
     },
     adminClass:{
