@@ -22,10 +22,11 @@ router.post('/', async (req, res)=>{
     } 
 
 
-    const { adminClass, date , summa, one, two, three, four, five, six} = data
+    const { adminClass, date, title, summa, one, two, three, four, five, six} = data
 
     try {
         const newCalendarData = {  
+            title: title,
             one: one,
             two: two,
             three: three,

@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 // Schemas
 var calendarFood = new Schema({
+    title:{
+        type:String,
+        required:true
+    },
     one:{
         type:String,
         required: true,
@@ -85,6 +89,7 @@ const CalendarFoodModel = mongoose.model('CalendarFoodModel', calendarFood);
 
 const createCalendarFood = (CalendarFoodData) =>{
     const newCalendarFoodModel = new CalendarFoodModel({
+        title: CalendarFoodData.title,
         one: CalendarFoodData.one,
         two:CalendarFoodData.two,
         three: CalendarFoodData.three,
