@@ -3,29 +3,64 @@ const Schema = mongoose.Schema;
 
 // Schemas
 var calendarFood = new Schema({
-    title:{
+    one:{
         type:String,
-        required: true
+        required: true,
+        default:'',
+        summa:{
+            type:String,
+            default:''
+
+        }
     },
-    first:{
-        type:String,
-        required:true,
-        default: '0'
-    },
-    second:{
-        type:String,
-        required:true,
-        default: '0'
-    },
-    third:{
+    two:{
         type:String,
         required:true,
-        default: '0' 
+        default: '',
+        summa:{
+            type:String,
+            default:''
+
+        }
     },
-    fourth:{
+    three:{
+        type:String,
+        required:true,
+        default: '',
+        summa:{
+            type:String,
+            default:''
+
+        }
+    },
+    four:{
+        type:String,
+        required:true,
+        default: '' ,
+        summa:{
+            type:String,
+            default:''
+
+        }
+    },
+    five:{
         type: String,
         required: true,
-        default: '0'
+        default: '',
+        summa:{
+            type:String,
+            default:''
+
+        }
+    },
+    six:{
+        type:String,
+        default:'',
+        summa:{
+            type:String,
+            default:''
+
+        }
     },
     adminClass:{
 		type: String,
@@ -50,11 +85,12 @@ const CalendarFoodModel = mongoose.model('CalendarFoodModel', calendarFood);
 
 const createCalendarFood = (CalendarFoodData) =>{
     const newCalendarFoodModel = new CalendarFoodModel({
-        title: CalendarFoodData.title,
-        first:CalendarFoodData.first,
-        second: CalendarFoodData.second,
-        third: CalendarFoodData.third,
-        fourth: CalendarFoodData.fourth,
+        one: CalendarFoodData.one,
+        two:CalendarFoodData.two,
+        three: CalendarFoodData.three,
+        four: CalendarFoodData.four,
+        five: CalendarFoodData.five,
+        six: CalendarFoodData.six,
         adminClass: CalendarFoodData.adminClass,
         date: CalendarFoodData.date,
         summa: CalendarFoodData.summa,

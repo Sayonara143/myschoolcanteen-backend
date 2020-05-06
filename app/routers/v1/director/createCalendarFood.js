@@ -22,15 +22,16 @@ router.post('/', async (req, res)=>{
     } 
 
 
-    const { adminClass, date , summa, title, second, first, third, fourth} = data
+    const { adminClass, date , summa, one, two, three, four, five, six} = data
 
     try {
         const newCalendarData = {  
-            title: title,
-            first: first,
-            second: second,
-            third: third,
-            fourth: fourth,         
+            one: one,
+            two: two,
+            three: three,
+            four: four,
+            five: five, 
+            six: six   ,     
             adminClass: adminClass,
             summa: summa,
             date: date,  
