@@ -19,10 +19,10 @@ console.log($("#student").val());
 });
 function get(){
     if(href == 0){
-        window.location.href = "https://canteenbobrova.glitch.me/users/balance";
+        window.location.href = "/users/balance";
     }
     if(href == 1){
-        window.location.href = "https://canteenbobrova.glitch.me/admin/students";
+        window.location.href = "/admin/student";
     }
     // $.ajax({ 
     //     url: url2, 
