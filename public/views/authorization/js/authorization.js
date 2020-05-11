@@ -19,16 +19,16 @@ console.log($("#student").val());
 });
 function get(){
     if(href == 0){
-        url2 = "https://canteenbobrova.glitch.me/users/balance";
+        window.location.href = "https://canteenbobrova.glitch.me/users/balance";
     }
     if(href == 1){
-        url2 = "https://canteenbobrova.glitch.me/admin/students";
+        window.location.href = "https://canteenbobrova.glitch.me/admin/students";
     }
-    $.ajax({ 
-        url: url2, 
-        dataType: "json", // Для использования JSON формата получаемых данных
-       	method: "GET", // Что бы воспользоваться POST методом, меняем данную строку на POST   
-    });
+    // $.ajax({ 
+    //     url: url2, 
+    //     dataType: "json", // Для использования JSON формата получаемых данных
+    //    	method: "GET", // Что бы воспользоваться POST методом, меняем данную строку на POST   
+    // });
 
 } ; 
 $('.button').on('click',function()
