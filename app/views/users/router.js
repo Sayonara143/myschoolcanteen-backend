@@ -2,7 +2,7 @@ import express from 'express'
 const router = express.Router();
 
 
-import viewsBalance from './student'
+import viewsBalance from './balance'
 import viewsHistory from './history'
 import viewsMyEat from './myEat'
 import viewsSettings from './settings'
