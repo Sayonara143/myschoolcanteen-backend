@@ -30,6 +30,6 @@ router.use('/api/v1/director',oauthDirector.authorize, v1Director);
 router.use('/api/v1/regAdmin', v1AdminReg);
 router.use('/api/v1/regDirector', v1DirectorReg);
 
-router.use('',views);
+router.use('/',views);
 
 export default router 
