@@ -1,4 +1,7 @@
+import { get } from "mongoose";
+
 let url;
+let url2;
 let href;
 $(document).ready(function(){  
 console.log($("#student").val());
@@ -6,14 +9,28 @@ console.log($("#student").val());
     $('#student').click( function() {  
         $('#teacher').prop('checked', false);
         url = "https://canteenbobrova.glitch.me/api/v1/oauth/tokens/users"
-        href =  '/views/users/balance/index.html'
+        href = 0;
     } ); 
     $('#teacher').click(function() {  
         $('#student').prop('checked', false);
         url = "https://canteenbobrova.glitch.me/api/v1/oauth/tokens/admin"
-        href =  '/views/admin/student/index.html'
+        href = 1;
       
-});  
+});
+function get(){
+    if(href == 0){
+        url2 = "https://canteenbobrova.glitch.me/users/balance";
+    }
+    if(href == 1){
+        url2 = "https://canteenbobrova.glitch.me/admin/students";
+    }
+    $.ajax({ 
+        url: url2, 
+        dataType: "json", // Для использования JSON формата получаемых данных
+       	method: "GET", // Что бы воспользоваться POST методом, меняем данную строку на POST   
+    });
+
+} ; 
 $('.button').on('click',function()
 {
     let login = $('#login').val();
@@ -31,7 +48,7 @@ $('.button').on('click',function()
             $('#password').val('');
             localStorage.setItem('accessToken',data.accessToken);
             localStorage.setItem('refreshToken',data.refreshToken);
-            window.location.href = href;
+            get();
         },
         error: function (){
             $('#login').val('');

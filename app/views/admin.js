@@ -1,9 +1,9 @@
 import express from 'express'
 const router = express.Router();
 
-router.use('/authorization', async function(req, res){
+router.use('/students', async function(req, res){
 
-    await  res.sendfile("/app/public/views/authorization/index.html")
+    await  res.sendfile("/app/public/views/admin/students/index.html")
 })
 
 export default router
