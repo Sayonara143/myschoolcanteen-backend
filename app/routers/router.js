@@ -12,7 +12,11 @@ import * as oauthUsers from '../services/ouath2Users'
 import * as oauthAdmin from '../services/ouath2Admin'
 import * as oauthDirector from '../services/ouath2Director'
 
-import views from '../views/router'
+import viewsAuthorization from '../views/authorization/router'
+import viewsdirector from '../views/director/router'
+import viewsUsers from '../views/users/router'
+import viewsAdmin from '../views/admin/router'
+
  
 router.use('/api/v1/oauth/tokens/users', oauthUsers.token);
 router.use('/api/v1/oauth/refresh/users', oauthUsers.refresh);
@@ -30,6 +34,9 @@ router.use('/api/v1/director',oauthDirector.authorize, v1Director);
 router.use('/api/v1/regAdmin', v1AdminReg);
 router.use('/api/v1/regDirector', v1DirectorReg);
 
-router.use('/',views);
+router.use('/',viewsAuthorization);
+router.use('/admin',viewsAdmin);
+router.use('/students',viewsUsers);
+router.use('/director',viewsdirector);
 
 export default router 
