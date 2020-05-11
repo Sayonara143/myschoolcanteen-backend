@@ -1,4 +1,4 @@
-import {url} from "../../../config"
+import {url} from "../../../config.js"
 $(document).ready(function(){   
     $.ajax({ 
         url: url + "api/v1/admin/getAllUsers", 
