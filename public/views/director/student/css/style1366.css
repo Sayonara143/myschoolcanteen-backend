@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1300px) and (max-width: 1366px) {
+    .container{
+        position: relative;
+        background-color:#EBE3CC;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .studentsButton{
+        opacity: 1;
+    }
+    .menuButton{
+        opacity: 0;
+    }
+    .settingsButton{
+        opacity: 0;
+    }
+    .outButton{
+        opacity: 0;
+    }
+}

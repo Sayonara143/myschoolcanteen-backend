@@ -1,0 +1,160 @@
+@media only screen and (min-width: 1300px) and (max-width: 1366px) {
+    .container{
+        position: relative;
+        background-color:#EBE3CC;
+        width: 100%;
+        height: 100vh;
+    }
+    .password{
+        position: absolute;
+        width: 470px;
+        height: 47px;
+        left: calc(((100vw - 606px)/2) + ((606px - 470px)/2));
+        top: 335px;
+
+        background: #EBE3CC;
+        border: 1px solid #423838;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    .login{
+        position: absolute;
+        width: 470px;
+        height: 47px;
+        left: calc(((100vw - 606px)/2) + ((606px - 470px)/2));
+        top: 270px;
+        z-index: 1;
+        background: #EBE3CC;
+        border: 1px solid #515050;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    input[type="text"], input[type="password"]{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        padding-left: 20px;
+    }
+    .button__header{
+        position: absolute;
+        width: 145px;
+        height: 24px;
+        left: calc((100vw - 145px)/2);
+        top: 480px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #242424;
+    }
+    .button{
+        position: absolute;
+        width: 276px;
+        height: 62px;
+        left: calc((100vw - 276px)/2);;
+        top: 460px;
+
+        background: linear-gradient(180deg, #FFC700 0%, #FFB039 100%);
+        box-shadow: 0px 5px 5px rgba(243, 209, 38, 0.25);
+        border-radius: 5px;
+    }
+    .wrapper{
+        z-index: 0;
+        position: absolute;
+        margin-left: calc((100vw - 606px)/2);
+        margin-top:170px;
+        width: 606px;
+        height: 394px;
+        background-color: #fbf5e5;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.39); ;
+        border-radius: 23px;
+    }
+    .wrapper__title{
+        position: absolute;
+        width: 394px;
+        height: 110px;
+        margin-left: calc((100vw - 394px)/2);
+        margin-top: 70px;
+
+        font-family: Rationale;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 96px;
+        line-height: 110px;
+        
+        z-index: 1;
+    }
+    .header{
+        position: absolute;
+        width: 2px;
+        height: 35px;
+        margin-left: calc((100vw - 606px)/2 + (338px/2));
+        margin-top: 180px;
+        z-index: 1;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+
+        color: #2D2727;
+    }
+    .student__check{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 480px;
+        top: 410px;
+        z-index: 2;
+
+    }
+    .teacher__check{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 750px;
+        top: 410px;
+        z-index: 2;
+
+    }
+    .teacher__title{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 790px;
+        top: 400px;
+        z-index: 2;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 44px;
+        color: #2D2727;
+    }
+    .student__title{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 520px;
+        top: 400px;
+        z-index: 2;
+        font-size: 19px;
+        line-height: 44px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 44px;
+        color: #2D2727;
+    }
+    .button:hover{
+        background: linear-gradient(180deg, #FFC700 80%, #FFB039 100%);
+    }
+}

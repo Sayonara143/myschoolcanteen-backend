@@ -1,0 +1,206 @@
+@media only screen and (min-width: 1300px) and (max-width: 1366px) {
+    .container{
+        position: relative;
+        background-color:#EBE3CC;
+        width: 100%;
+        height: 100vh;
+    }
+    .historyButton{
+      opacity: 1;
+    }
+    .myEatButton{
+      opacity: 0;
+    }
+    .balanceButton{
+        opacity: 0;
+    }
+    .settingsButton{
+      opacity: 0;
+    }
+    .outButton{
+      opacity: 0;
+    }
+    .historyBlock{
+      position: absolute;
+      width: 940px;
+      height: 600px;
+      
+      margin-left: 420px;
+      margin-top: 40px;
+    }
+    .weekOne{
+      margin-top: 10px;
+      position: relative;
+      width: 930px;
+      height: 140px;
+      
+      margin-left: 5px;
+    }
+    .textNumberOne{
+      position: fixed;
+      margin-left: 30px;
+      width: 30px;
+      height: 100px;
+      background-color: #D1D696;
+      border: 1px solid #423838;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 7px #423838;
+      border-radius: 500px;
+    }
+    .SummaNumberOne{
+      position: fixed;
+      margin-top: 105px;
+      margin-left:640px;
+      width: 180px;
+      height: 30px;
+      background-color: #D1D696;
+    }
+    .weekTwo{
+      margin-top: 5px;
+      position: relative;
+      width: 930px;
+      height: 140px;
+      
+      margin-left: 5px;
+    }
+    .textNumberTwo{
+      position: fixed;
+      width: 30px;
+      height: 100px;
+      margin-left: 30px;
+      background-color: #D1D696;
+      border: 1px solid #423838;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 7px #423838;
+      border-radius: 500px;
+      }
+      .SummaNumberTwo{
+        position: fixed;
+        margin-top: 105px;
+        margin-left:640px;
+        width: 180px;
+        height: 30px;
+        background-color: #D1D696;
+      }
+    .weekThree{
+      margin-top: 5px;
+      position: relative;
+      width: 930px;
+      height: 140px;
+      
+      margin-left: 5px;
+    }
+    .textNumberThree{
+      position: fixed;
+      width: 30px;
+      height: 100px;
+      margin-left: 30px;
+      background-color: #D1D696;
+      border: 1px solid #423838;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 7px #423838;
+      border-radius: 500px;
+    }
+    .SummaNumberThree{
+      position: fixed;
+      
+      margin-top: 105px;
+      margin-left:640px;
+      width: 180px;
+      height: 30px;
+      background-color: #D1D696;
+    }
+    .weekFour{
+      margin-top: 5px;
+      position: relative;
+      width: 930px;
+      height: 140px;
+      
+      margin-left: 5px;
+    }
+    .textNumberFour{
+      position: fixed;
+      width: 30px;
+      height: 100px;
+      margin-left: 30px;
+      background-color: #D1D696;
+      border: 1px solid #423838;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 7px #423838;
+      border-radius: 500px;
+    }
+    .SummaNumberFour{
+      position: fixed;
+      margin-top: 105px;
+      margin-left:640px;
+      width: 180px;
+      height: 30px;
+      background-color: #D1D696;
+    }
+    .block{
+      position: fixed;
+      width: 120px;
+      height: 100px;
+      border: 1px solid #000000;
+    }
+    .textSumma{
+      position: relative;
+      margin-top: 50px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 23px;
+      margin-left: 30px;
+    }
+    .One{
+      margin-left:100px;
+    }
+    .Two{
+      margin-left:220px;
+    }
+    .Three{
+      margin-left:340px;
+    }
+    .Four{
+      margin-left:460px;
+    }
+    .Five{
+      margin-left:580px;
+    }
+    .Six{
+      margin-left:700px;
+    }
+    .circle{
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      z-index: 3;
+      text-align: center;
+      margin-top: 5px;
+      margin-left: 85px;
+      
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+
+      border-radius: 50%;
+      background-color: #EFDDB9;
+      border: 1px solid #242424;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    }
+    .text{
+      text-align: left;
+      padding-left: 10px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 28px;
+    }
+    
+    
+}
