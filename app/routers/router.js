@@ -12,7 +12,7 @@ import * as oauthUsers from '../services/ouath2Users'
 import * as oauthAdmin from '../services/ouath2Admin'
 import * as oauthDirector from '../services/ouath2Director'
 
-import * as views from '../views/router'
+import views from '../views/router'
  
 router.use('/api/v1/oauth/tokens/users', oauthUsers.token);
 router.use('/api/v1/oauth/refresh/users', oauthUsers.refresh);
