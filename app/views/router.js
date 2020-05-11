@@ -4,7 +4,7 @@ const router = express.Router();
 import viewsDirector from './director';
 import viewsUsers from './users'
 import viewsAdmin from './admin'
-import authorizationDiector from './authorizationDirector'
+//import authorizationDiector from './authorizationDirector'
 import authorization from './authorization'
 // import authorizationSuperAdmin from './authorizationSuperAdmin'
 
