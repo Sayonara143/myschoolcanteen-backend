@@ -6,12 +6,12 @@ console.log($("#student").val());
     $('#student').click( function() {  
         $('#teacher').prop('checked', false);
         url = "https://canteenbobrova.glitch.me/api/v1/oauth/tokens/users"
-        href =  '../users/balance/index.html'
+        href =  '/views/users/balance/index.html'
     } ); 
     $('#teacher').click(function() {  
         $('#student').prop('checked', false);
         url = "https://canteenbobrova.glitch.me/api/v1/oauth/tokens/admin"
-        href =  '../admin/student/index.html'
+        href =  '/views/admin/student/index.html'
       
 });  
 $('.button').on('click',function()
