@@ -1,6 +1,7 @@
+import {url} from "../../../config"
 $(document).ready(function(){   
     $.ajax({ 
-        url: "https://cooperative-universal-homegrown.glitch.me/api/v1/admin/getAllUsers", 
+        url: url + "api/v1/admin/getAllUsers", 
         //dataType: "json", // Для использования JSON формата получаемых данных
        	method: "GET", // Что бы воспользоваться POST методом, меняем данную строку на POST   
         data: {},
@@ -15,7 +16,7 @@ $(document).ready(function(){
                 $('<div/>', {
                     class: 'result',
                     append: $('<br>')
-                         .add ($('<img>',{ class:'result__logo',src:"https://cooperative-universal-homegrown.glitch.me/" + data[i].path}))
+                         .add ($('<img>',{ class:'result__logo',src: url + data[i].path}))
                          .add ($('<div/>',{ class:'result__titlev1',text: data[i].surname +' '+ data[i].name}))
                          .add ($('<div/>',{ class:'result__titlev2',text: "Баланс:" +" "+ data[i].balance}))
                   }).appendTo('#resultSerch');
@@ -25,7 +26,7 @@ $(document).ready(function(){
         error: function (jqXHR,  textStatus, errorThrown){
             if(jqXHR.status == 401){
                 alert('Ваше сессия завершена');
-                window.location.href = "../../authorization/index.html"
+                window.location.href = ""
             }
             
         }
