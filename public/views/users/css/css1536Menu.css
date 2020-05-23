@@ -1,17 +1,17 @@
-@media only screen and (min-width: 1300px) and (max-width: 1366px) {
+@media only screen and (min-width: 1500px) and (max-width: 1536px) {
 .students__logo{
     position: absolute;
-    width: 150px;
+    width: 160px;
     height: 35px;
-    left:160px;
-    top: 110px;
+    left:190px;
+    top: 120px;
     padding-left: 25px;
     z-index: 1;
     background-color: #E15235;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 35px;
 
     color: #000000;
@@ -20,13 +20,13 @@
     position: absolute;
     width: 222px;
     height: 40px;
-    left: 115px;
-    top: 55px;
+    left: 130px;
+    top: 60px;
     z-index: 1;
     font-family: Rationale;
     font-style: normal;
     font-weight: normal;
-    font-size: 45px;
+    font-size: 50px;
     line-height: 58px;
 
     color: #000000;
@@ -34,15 +34,14 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .logo__img{
-    width: 130px;
     position: absolute;
-    left: 20px;
+    left: 30px;
     top: 18px;
     z-index: 1;
 }
 .menu{
     position: absolute;
-    width: 330px;
+    width: 370px;
     height: 100vh;
     z-index: 0;
 
@@ -50,17 +49,14 @@
     box-shadow: 0px 4px 25px #695D55;
 }
 .menu__line1{
-    width: 230px;
     position: absolute;
     z-index: 2;
 }
 .menu__line2{
-    width: 230px;
     position: absolute;
     z-index: 2;
 }
 .menu__line3{
-    width: 230px;
     position: absolute;
     z-index: 2;
 }
@@ -69,21 +65,20 @@
     z-index: 2;
 }
 .menu__line5{
-    width: 230px;
     position: absolute;
     z-index: 2;
 }
 .balance{
     position: absolute;
     width: 300px;
-    height: 50px;
+    height: 60px;
     top: 240px;
-    left: 50px;
+    left: 40px;
     z-index: 3;
 }
 .balance__title{
-    padding-top: calc((50px - 28px)/2);
-    padding-left: 80px;
+    padding-top: calc((60px - 28px)/2);
+    padding-left: 90px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -93,101 +88,101 @@
     color: #000000;
 }
 .balance__logo{
-    width: 52px;
-    height: 52px;
-    margin-top: calc((50px - 52px)/2);
-    position: absolute;
+    width: 57px;
+    height: 57px;
+    margin-top: calc((60px - 57px)/2);
+    position: fixed;
     padding-left: 20px;
 }
 .history{
     position: absolute;
-    height: 50px;
+    height: 60px;
     width: 300px;
-    top: 290px;
-    left: 50px;
+    top: 300px;
+    left: 40px;
     z-index: 3;
 }
 .history__title{
-    padding-top: calc((50px - 28px)/2);
-    padding-left: 80px;
+    padding-top: calc((60px - 28px)/2);
+    padding-left: 90px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 28px;
 
     color: #000000;
 }
 .history__logo{
-    width: 52px;
-    height: 52px;
-    margin-top: calc((50px - 52px)/2);;
-    position: absolute;
+    width: 57px;
+    height: 57px;
+    margin-top: calc((60px - 57px)/2);;
+    position: fixed;
     padding-left: 20px;
 }
 .myEat{
     position: absolute;
-    height: 50px;
-    top: 340px;
+    height: 60px;
+    top: 360px;
     width: 300px;
-    left: 50px;
+    left: 40px;
     z-index: 3;
 }
 .myEat__title{
-    padding-top: calc((50px - 28px)/2);
-    padding-left: 80px;
+    padding-top: calc((60px - 28px)/2);
+    padding-left: 90px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 28px;
 
     color: #000000;
 }
 .myEat__logo{
-    width: 52px;
-    height: 52px;
-    margin-top: calc((50px - 52px)/2);
-    position: absolute;
+    width: 57px;
+    height: 57px;
+    margin-top: calc((60px - 57px)/2);
+    position: fixed;
     padding-left: 20px;
 }
 .menu__line5{
-    margin-top: calc((50px - 28px)/2);
+    margin-top: calc((60px - 28px)/2);
     
 }
 .historyButton{
     position: absolute;
     background-color: #C8A79E;
-    top: 295px;
-    left: 41px;
-    width: 250px;
-    height: 40px;
+    top: 305px;
+    left: 30px;
+    width: 304px;
+    height: 50px;
     z-index: 1;
 }
 .myEatButton{
     position: absolute;
     background-color: #C8A79E;
-    top: 345px;
-    left: 40px;
-    width: 250px;
-    height: 41px;
+    top: 366px;
+    left: 30px;
+    width: 304px;
+    height: 50px;
     z-index: 1;
 }
  .balanceButton{
     position: absolute;
     background-color: #C8A79E;
-    top: 245px;
-    left: 40px;
-    width: 250px;
-    height: 41px;
+    top: 246px;
+    left: 30px;
+    width: 304px;
+    height: 50px;
     z-index: 1;
 }
 .settingsButton{
     position: absolute;
     background-color: #C8A79E;
-    top: 547px;
-    left: 40px;
-    width: 250px;
+    top: 647px;
+    left: 30px;
+    width: 304px;
     height: 40px;
     z-index: 1;
     
@@ -196,9 +191,9 @@
 .outButton{
     position: absolute;
     background-color: #C8A79E;
-    top: 596px;
-    left: 40px;
-    width: 250px;
+    top: 696px;
+    left: 30px;
+    width: 304px;
     height: 40px;
     z-index: 1;
     background: #C8A79E;
@@ -207,7 +202,7 @@
 .settings{
     height: 50px;
     position: absolute;
-    top: 540px;
+    top: 640px;
     left:50px;
     width: 300px;
     z-index: 2;
@@ -215,9 +210,9 @@
 .settings__logo{
     margin-left: 10px;
     margin-top: 10px;
-    width: 35px;
-    height: 35px;
-    position: absolute;
+    width: 37px;
+    height: 37px;
+    position: fixed;
     z-index: 2;
 }
 .settings__title{
@@ -226,14 +221,14 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
+    font-size: 28px;
     line-height: 28px;
     z-index: 2;
     color: #000000;
 }
 .out{
     position: absolute;
-    top: 590px;
+    top: 690px;
     width: 300px;
     left:50px;
     height: 50px;
@@ -242,9 +237,9 @@
 .out__logo{
     margin-left: 10px;
     margin-top: 10px;
-    width: 35px;
-    height: 35px;
-    position: absolute;
+    width: 37px;
+    height: 37px;
+    position: fixed;
 }
 .out__title{
     margin-top: 10px;
@@ -252,7 +247,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
+    font-size: 28px;
     line-height: 28px;
 
     color: #000000;

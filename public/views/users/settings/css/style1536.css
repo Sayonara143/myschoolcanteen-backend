@@ -48,183 +48,183 @@ body{
         width: 100%;
         height: 100vh;
     }
-    .password{
-        position: absolute;
-        width: 470px;
-        height: 47px;
-        left: calc((100vw - 470px)/2);;
-        top: 410px;
-
-        background: #EBE3CC;
-        border: 1px solid #423838;
-        box-sizing: border-box;
-        border-radius: 10px;
+    .historyButton{
+      opacity: 0;
     }
-    .login{
-        position: absolute;
-        width: 470px;
-        height: 47px;
-        left: calc((100vw - 470px)/2);;
-        top: 350px;
-        z-index: 1;
-        background: #EBE3CC;
-        border: 1px solid #515050;
-        box-sizing: border-box;
-        border-radius: 10px;
+    .myEatButton{
+      opacity: 0;
     }
-    .login__header{
-        position: absolute;
-        width: 73px;
-        height: 22px;
-        left: 560px;
-        top: 365px;
-        z-index: 2;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-
-        color: #231D1D;
+    .balanceButton{
+      opacity: 0;
     }
-    .password__header{
-        position: absolute;
-        width: 74px;
-        height: 22px;
-        left: 560px;
-        top: 425px;
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-
-        color: #231D1D;
+    .settingsButton{
+      opacity: 1;
     }
-    .button__header{
-        position: absolute;
-        width: 145px;
-        height: 24px;
-        left: calc((100vw - 145px)/2);;
-        top: 529px;
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 22px;
-        text-align: center;
-
-        color: #242424;
+    .outButton{
+      opacity: 0;
     }
-    .button{
-        position: absolute;
-        width: 276px;
-        height: 62px;
-        left: calc((100vw - 276px)/2);;
-        top: 510px;
 
-        background: linear-gradient(180deg, #FFC700 0%, #FFB039 100%);
-        box-shadow: 0px 5px 5px rgba(243, 209, 38, 0.25);
-        border-radius: 5px;
-    }
-    .wrapper{
-        z-index: 0;
-        position: absolute;
-        margin-left: calc((100vw - 606px)/2);
-        margin-top: calc((100vh - 394px)/2 + 57px);
-        width: 606px;
-        height: 394px;
-        background-color: #fbf5e5;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.39); ;
-        border-radius: 23px;
-    }
-    .wrapper__title{
-        position: absolute;
-        width: 394px;
-        height: 110px;
-        margin-left: calc((100vw - 394px)/2);
-        margin-top: 131px;
+    .changeBlock{
+      position: absolute;
+      width: 1100px;
+      height: 280px;
+      left: 405px;
+      margin-top: 80px;
 
-        font-family: Rationale;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 96px;
-        line-height: 110px;
-        
-        z-index: 1;
+      background: #FBF5E5;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     }
-    .header{
-        position: absolute;
-        width: 268px;
-        height: 35px;
-        left: calc((100vw - 268px)/2);
-        top: 250px;
-        z-index: 1;
+    .number1{
+      position: fixed;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 20px;
 
-       
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2D2727;
+      color: #000000;
+
+      margin-left: 10px;
     }
-    .student__check{
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 780px;
-        top: 575px;
-        z-index: 2;
-        /* font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2D2727; */
+    .number2{
+      margin-left: 400px;
+      position: fixed;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 20px;
+
+      color: #000000;
 
     }
-    .teacher__check{
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 1050px;
-        top: 575px;
-        z-index: 2;
+    .number3{
+      position: fixed;
+      margin-left: 850px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 20px;
 
-        /* font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2D2727; */
+      color: #000000;
 
     }
-    .teacher__title{
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 1090px;
-        top: 565px;
-        z-index: 2;
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 44px;
-        color: #2D2727;
+    .img__number1{
+     position: fixed;
+     height: 240px;
+      margin-top: -220px;
+      margin-left: 280px;
     }
-    .student__title
-    {
-        width: 18px;
-        height: 18px;
-        left: 820px;
-        top: 565px;
-        z-index: 2;
-        font-size: 19px;
-        line-height: 44px;
+    .img__number3{
+      position: fixed;
+      height: 240px;
+      margin-top: 20px;
+      margin-left: -20px;
+    }
+    .changeName__title{
+      position: relative;
+      margin-top: 40px;
+    }
+    .changeEmail__title{
+      margin-top: 40px;
+      position: relative;
+    }
+    .changePhone__title{
+      margin-top: 40px;
+      position: relative;
+    }
+    .changePassword__title{
+      margin-top: 40px;
+      position: relative;
+    }
+    .changeName__value{
+      position: relative;
+      margin-top: 40px;
+    }
+    .changeEmail__value{
+      margin-top: 40px;
+      position: relative;
+    }
+    .changePhone__value{
+      margin-top: 40px;
+      position: relative;
+    }
+    .changePassword__value{
+      margin-top: 40px;
+      position: relative;
+    }
+    .changeName__button{
+      margin-top: 30px;
+      position: relative;
+    }
+    .changeEmail__button{
+      margin-top: 30px;
+      position: relative;
+    }
+    .changePhone__button{
+      margin-top: 30px;
+      position: relative;
+    }
+    .changePassword__button{
+      margin-top: 30px;
+      position: relative;
+    }
+    /* for ***__button */
+    .button__form{
+      border-radius: 50px;
+      background-color: #D1D696;
+      width: 200px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      font-size: 25px;
+    }
+    .changeAvatar{
+      position: absolute;
+      
+      width: 600px;
+      height: 200px;
+      margin-top: 400px;
+      margin-left: 405px;
+
+    }
+    .img__avatar{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+    .textDelete{
+      position: fixed;
+      width: 350px;
+      height: 100px;
+      margin-top: 50px;
+      margin-left: 240px;
+      z-index: 2;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 25px;
+      text-decoration-line: underline;
+
+      color: #000000;
+    }
+    .textUpdate{
+      position: fixed;
+      width: 350px;
+      height: 100px;
+      margin-top: 110px;
+      margin-left: 240px;
+      z-index: 2;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 25px;
+      text-decoration-line: underline;
+
+      color: #000000;
     }
 }

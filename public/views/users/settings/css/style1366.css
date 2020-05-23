@@ -112,20 +112,30 @@
       position: relative;
     }
     .changeName__button{
-      margin-top: 40px;
+      margin-top: 30px;
       position: relative;
     }
     .changeEmail__button{
-      margin-top: 40px;
+      margin-top: 30px;
       position: relative;
     }
     .changePhone__button{
-      margin-top: 40px;
+      margin-top: 30px;
       position: relative;
     }
     .changePassword__button{
-      margin-top: 40px;
+      margin-top: 30px;
       position: relative;
+    }
+    /* for ***__button */
+    .button__form{
+      border-radius: 50px;
+      background-color: #D1D696;
+      width: 150px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      font-size: 25px;
     }
     .changeAvatar{
       position: absolute;
