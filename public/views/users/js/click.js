@@ -1,26 +1,26 @@
 $(document).ready(function(){ 
     $('.balance').on('click', function() {
-            window.location.href='../balance/index.html' 
+            window.location.href='/students/balance' 
         })
 
 
     $('.history').on('click', function() {
-            window.location.href='../history/index.html' 
+            window.location.href='/students/history' 
         })
 
  
     $('.myEat').on('click', function() {
-            window.location.href='../myEat/index.html' 
+            window.location.href='/students/myEat' 
         })
 
 
     $('.out').on('click', function (){
         localStorage.accessToken = '';
         localStorage.refreshToken = '';
-        window.location.href = '../../authorization/index.html'
+        window.location.href = '/authorization/index.html'
     });
     
     $('.settings').on('click', function (){
-        window.location.href = '../settings/index.html'
+        window.location.href = 'students/settings'
     });
 })
