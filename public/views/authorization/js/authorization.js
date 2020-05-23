@@ -19,7 +19,7 @@ console.log($("#student").val());
 });
 function get(){
     if(href == 0){
-        window.location.href = "/users/balance";
+        window.location.href = "/students/balance";
     }
     if(href == 1){
         window.location.href = "/admin/student";
