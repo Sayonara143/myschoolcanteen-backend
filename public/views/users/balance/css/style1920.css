@@ -6,331 +6,84 @@
         width: 100%;
         height: 100vh;
     }
-    .teacher__logo{
+    
+    .avatar{
         position: absolute;
-        width: 160px;
-        height: 35px;
-        left:250px;
-        top: 170px;
-        padding-left: 25px;
-        z-index: 1;
-        background-color: #E15235;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 35px;
-
-        color: #000000;
+        width: 200px;
+        height: 300px;
+        background-color: lemonchiffon;
+        margin-top: 50px;
+        margin-left: 800px;
     }
-    .logo__title{
+    .nameUser{
         position: absolute;
-        width: 222px;
-        height: 40px;
-        left: 200px;
-        top: 100px;
-        z-index: 1;
-        font-family: Rationale;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 50px;
-        line-height: 58px;
-
-        color: #000000;
-
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .logo__img{
-        position: absolute;
-        left: 100px;
-        top: 58px;
-        z-index: 1;
-    }
-    .menu{
-        position: absolute;
-        width: 500px;
-        height: 100vh;
-        z-index: 0;
-
-        background: #EBE3CC;
-        box-shadow: 0px 4px 25px #695D55;
-    }
-    .menu__line1{
-        position: absolute;
-        z-index: 2;
-    }
-    .menu__line2{
-        position: absolute;
-        z-index: 2;
-    }
-    .menu__line3{
-        position: absolute;
-        z-index: 2;
-    }
-    .menu__line4{
-        position: absolute;
-        z-index: 2;
-    }
-    .menu__line5{
-        position: absolute;
-        z-index: 2;
-    }
-    .addUser{
-        position: absolute;
-        width: 300px;
-        height: 80px;
-        top: 300px;
-        left: 150px;
-        z-index: 3;
-    }
-    .addUser__title{
-        padding-top: 10px;
-        padding-left: 90px;
+        width: 100px;
+        height: 50px;
+        background-color:red;
+        margin-top: 300px;
+        margin-left: 850px;
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 26px;
-        line-height: 28px;
-
-        color: #000000;
-    }
-    .addUser__logo{
-        margin-top: calc((80px - 47px)/2);
-        position: fixed;
-        padding-left: 20px;
-    }
-    .history{
-        position: absolute;
-        height: 80px;
-        width: 300px;
-        top: 380px;
-        left: 150px;
-        z-index: 3;
-    }
-    .history__title{
-        padding-top: calc((80px - 28px)/2);
-        padding-left: 90px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 28px;
-        line-height: 28px;
-
-        color: #000000;
-    }
-    .history__logo{
-        margin-top: calc((80px - 47px)/2);;
-        position: fixed;
-        padding-left: 20px;
-    }
-    .chart{
-        position: absolute;
-        height: 80px;
-        top: 460px;
-        width: 300px;
-        left: 150px;
-        z-index: 3;
-    }
-    .chart__title{
-        padding-top: calc((80px - 28px)/2);
-        padding-left: 90px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 28px;
-        line-height: 28px;
-
-        color: #000000;
-    }
-    .chart__logo{
-        margin-top: calc((80px - 47px)/2);
-        position: fixed;
-        padding-left: 20px;
-    }
-    .students{
-        position: absolute;
-        height: 80px;
-        top: 540px;
-        width: 300px;
-        left: 150px;
-        z-index: 3;
-    }
-    .students__title{
-        margin-top: calc((80px - 28px)/2);
-        padding-left: 90px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 28px;
-        line-height: 28px;
-
-        color: #000000;
-    }
-    .students__logo{
-        margin-top: calc((80px - 47px)/2);;
-        position: fixed;
-        padding-left: 20px;
-    }
-    .menu__line5{
-        margin-top: calc((80px - 28px)/2);
-        
-    }
-    .addUsersButton{
-        position: absolute;
-        background-color: #C8A79E;
-        top: 305px;
-        left: 110px;
-        width: 350px;
-        height: 70px;
-        z-index: 1;
-        opacity: 0;
-    }
-    .historyButton{
-        position: absolute;
-        background-color: #C8A79E;
-        top: 385px;
-        left: 110px;
-        width: 350px;
-        height: 70px;
-        z-index: 1;
-        opacity: 0;
-    }
-    .chartButton{
-        position: absolute;
-        background-color: #C8A79E;
-        top: 465px;
-        left: 110px;
-        width: 350px;
-        height: 70px;
-        z-index: 1;
-        opacity: 0;
-    }
-     .studentsButton{
-        position: absolute;
-        background-color: #C8A79E;
-        top: 546px;
-        left: 110px;
-        width: 350px;
-        height: 70px;
-        z-index: 1;
-    }
-    .settings{
-        position: absolute;
-        top: 850px;
-        left:170px;
-        width: 300px;
-    }
-    .settings__logo{
-        position: fixed;
-    }
-    .settings__title{
-        margin-top: 10px;
-        margin-left: 65px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 28px;
-        line-height: 28px;
-
-        color: #000000;
-    }
-    .out{
-        position: absolute;
-        top: 910px;
-        width: 300px;
-        left:170px;
-    }
-    .out__logo{
-        position: fixed;
-    }
-    .out__title{
-        margin-top: 10px;
-        margin-left: 65px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 28px;
-        line-height: 28px;
-
-        color: #000000;
-    }
-    .rightBlock__title{
-        position: absolute;
-        width: 150px;
-        height: 45px;
-        left: 650px;
-        top: 150px;
-
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 38px;
-        line-height: 45px;
-        /* identical to box height */
-
+        line-height: 42px;
         text-align: center;
 
         color: #000000;
     }
-    .search{
+    .buttonPay{
         position: absolute;
-        width: 400px;
-        height: 54px;
-        left: 1380px;
-        top: 150px;
-        font-size: 28px;
-        background: #D1D696;
-        padding-left: 60px;
-        box-sizing: border-box;
-        border: 1px solid #515050;
-        box-shadow: 0px 4px 12px #423838;
-        border-radius: 10px;
-    }
-    .search__logo{
-        position: absolute;
-        left: 1380px;
-        top: 153px;
-
-    }
-    .resultSerch{
-        position: absolute;
-        width: 1150px;
-        height: 700px;
-        left: 630px;
-        top: 230px;
-
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
-    }
-    .result{
-        position: relative;
-        margin-top: 20px;
-        margin-left: 20px;
-        width: 1100px;
-        height: 100px;
-        
-        
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
-    }
-    .result__logo{
-        margin-top: -5px;
-        margin-left: 20px;
-        width: 70px;
-        height: 70px;
+        width:200px;
+        height: 50px;
+        margin-top: 400px;
+        margin-left: 800px;
         border-radius: 50%;
-    }
-    .result__titlev1{
-        margin-left: 130px;
-        margin-top: -55px;
-        font-size: 28px;
-    }
-    .result__titlev2{
-        margin-left: 900px;
-        margin-top: -30px;
-        font-size: 28px;
-    }
+        border: 1px solid #000000;
 
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 42px;
+
+        text-align: center;
+
+    }
+    .balance__know{
+        position: absolute;
+        width:200px;
+        height: 50px;
+        margin-top: 500px;
+        margin-left: 800px;
+        border-radius: 50%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 42px;
+        text-align: center;
+    }
+    .img__avatar{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+
+    }
+    .historyButton{
+        opacity: 0;
+    }
+    .myEatButton{
+        opacity: 0;
+    }
+    .balanceButton{
+        opacity: 1;
+    }
+    .settingsButton{
+        opacity: 0;
+    }
+    .outButton{
+        opacity: 0;
+    }
 }

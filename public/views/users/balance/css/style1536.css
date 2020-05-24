@@ -48,183 +48,84 @@ body{
         width: 100%;
         height: 100vh;
     }
-    .password{
+    
+    .avatar{
         position: absolute;
-        width: 470px;
-        height: 47px;
-        left: calc((100vw - 470px)/2);;
-        top: 410px;
-
-        background: #EBE3CC;
-        border: 1px solid #423838;
-        box-sizing: border-box;
-        border-radius: 10px;
+        width: 200px;
+        height: 300px;
+        background-color: lemonchiffon;
+        margin-top: 50px;
+        margin-left: 800px;
     }
-    .login{
+    .nameUser{
         position: absolute;
-        width: 470px;
-        height: 47px;
-        left: calc((100vw - 470px)/2);;
-        top: 350px;
-        z-index: 1;
-        background: #EBE3CC;
-        border: 1px solid #515050;
-        box-sizing: border-box;
-        border-radius: 10px;
-    }
-    .login__header{
-        position: absolute;
-        width: 73px;
-        height: 22px;
-        left: 560px;
-        top: 365px;
-        z-index: 2;
-        font-family: Montserrat;
+        width: 100px;
+        height: 50px;
+        background-color:red;
+        margin-top: 300px;
+        margin-left: 850px;
+        font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-
-        color: #231D1D;
-    }
-    .password__header{
-        position: absolute;
-        width: 74px;
-        height: 22px;
-        left: 560px;
-        top: 425px;
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
-
-        color: #231D1D;
-    }
-    .button__header{
-        position: absolute;
-        width: 145px;
-        height: 24px;
-        left: calc((100vw - 145px)/2);;
-        top: 529px;
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 26px;
+        line-height: 42px;
         text-align: center;
 
-        color: #242424;
+        color: #000000;
     }
-    .button{
+    .buttonPay{
         position: absolute;
-        width: 276px;
-        height: 62px;
-        left: calc((100vw - 276px)/2);;
-        top: 510px;
+        width:200px;
+        height: 50px;
+        margin-top: 400px;
+        margin-left: 800px;
+        border-radius: 50%;
+        border: 1px solid #000000;
 
-        background: linear-gradient(180deg, #FFC700 0%, #FFB039 100%);
-        box-shadow: 0px 5px 5px rgba(243, 209, 38, 0.25);
-        border-radius: 5px;
-    }
-    .wrapper{
-        z-index: 0;
-        position: absolute;
-        margin-left: calc((100vw - 606px)/2);
-        margin-top: calc((100vh - 394px)/2 + 57px);
-        width: 606px;
-        height: 394px;
-        background-color: #fbf5e5;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.39); ;
-        border-radius: 23px;
-    }
-    .wrapper__title{
-        position: absolute;
-        width: 394px;
-        height: 110px;
-        margin-left: calc((100vw - 394px)/2);
-        margin-top: 131px;
-
-        font-family: Rationale;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+        font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        font-size: 96px;
-        line-height: 110px;
-        
-        z-index: 1;
+        font-size: 26px;
+        line-height: 42px;
+
+        text-align: center;
+
     }
-    .header{
+    .balance__know{
         position: absolute;
-        width: 268px;
-        height: 35px;
-        left: calc((100vw - 268px)/2);
-        top: 250px;
-        z-index: 1;
-
-       
-        font-family: Montserrat;
+        width:200px;
+        height: 50px;
+        margin-top: 500px;
+        margin-left: 800px;
+        border-radius: 50%;
+        font-family: Roboto;
         font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2D2727;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 42px;
+        text-align: center;
     }
-    .student__check{
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 780px;
-        top: 575px;
-        z-index: 2;
-        /* font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2D2727; */
+    .img__avatar{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
 
     }
-    .teacher__check{
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 1050px;
-        top: 575px;
-        z-index: 2;
-
-        /* font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
-        color: #2D2727; */
-
+    .historyButton{
+        opacity: 0;
     }
-    .teacher__title{
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 1090px;
-        top: 565px;
-        z-index: 2;
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 44px;
-        color: #2D2727;
+    .myEatButton{
+        opacity: 0;
     }
-    .student__title
-    {
-        width: 18px;
-        height: 18px;
-        left: 820px;
-        top: 565px;
-        z-index: 2;
-        font-size: 19px;
-        line-height: 44px;
+    .balanceButton{
+        opacity: 1;
+    }
+    .settingsButton{
+        opacity: 0;
+    }
+    .outButton{
+        opacity: 0;
     }
 }
