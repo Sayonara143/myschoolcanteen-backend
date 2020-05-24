@@ -153,8 +153,8 @@ body{
         position: absolute;
         width: 18px;
         height: 18px;
-        left: 780px;
-        top: 575px;
+        left: 580px;
+        top: 475px;
         z-index: 2;
         /* font-family: Montserrat;
         font-style: normal;
@@ -168,8 +168,8 @@ body{
         position: absolute;
         width: 18px;
         height: 18px;
-        left: 1050px;
-        top: 575px;
+        left: 850px;
+        top: 475px;
         z-index: 2;
 
         /* font-family: Montserrat;
@@ -184,8 +184,8 @@ body{
         position: absolute;
         width: 18px;
         height: 18px;
-        left: 1090px;
-        top: 565px;
+        left: 890px;
+        top: 465px;
         z-index: 2;
 
         font-family: Montserrat;
@@ -197,12 +197,19 @@ body{
     }
     .student__title
     {
+        position: absolute;
         width: 18px;
         height: 18px;
-        left: 820px;
-        top: 565px;
+        left: 620px;
+        top: 465px;
         z-index: 2;
         font-size: 19px;
         line-height: 44px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 44px;
+        color: #2D2727;
     }
 }
