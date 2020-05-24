@@ -17,10 +17,10 @@ $(document).ready(function(){
     $('.out').on('click', function (){
         localStorage.accessToken = '';
         localStorage.refreshToken = '';
-        window.location.href = '/authorization/index.html'
+        window.location.href = '/'
     });
     
     $('.settings').on('click', function (){
-        window.location.href = 'students/settings'
+        window.location.href = '/students/settings'
     });
 })
