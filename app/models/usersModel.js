@@ -95,6 +95,29 @@ const deleteUserByLogin =(login)=>{
 const UpdateUsersBalance = (login,balance) => {
 	return UsersModel.updateOne({login:login},{balance:balance}, {upsert: false})
 }
+// settings change users
+const UpdateUsersEmail = (login,email) => {
+	return UsersModel.updateOne({login:login},{email:email}, {upsert: false})
+}
+//const UpdateUsersName = (login,name) => {
+	//return UsersModel.updateOne({login:login},{name: name}, {upsert: false})
+//}
+//const UpdateUsersSurname = (login,surname) => {
+	//return UsersModel.updateOne({login:login},{surname:surname}, {upsert: false})
+//}
+//const UpdateUsersPatronymic = (login,patronymic) => {
+	//return UsersModel.updateOne({login:login},{patronymic:patronymic}, {upsert: false})
+//}
+const UpdateUsersNumberPhone = (login, numberPhone) => {
+	return UsersModel.updateOne({login:login},{numberPhone:numberPhone}, {upsert: false})
+}
+const UpdateUsersPath = (login,path) => {
+	return UsersModel.updateOne({login:login},{path:path}, {upsert: false})
+}
+const UpdateUsersPasswordHashSalt = (login, passwordHash, salt) => {
+	return UsersModel.updateOne({login:login},{passwordHash:passwordHash,salt:salt }, {upsert: false, multi: true})
+}
+
 
 
 export{
@@ -103,5 +126,12 @@ export{
     findUserByLogin,
     createUsers,
     deleteUserByLogin,
-
+    //settings users change
+    UpdateUsersEmail,
+    //UpdateUsersName,
+    //UpdateUsersSurname,
+    //UpdateUsersPatronymic,
+    UpdateUsersNumberPhone,
+    UpdateUsersPath, 
+    UpdateUsersPasswordHashSalt
 }

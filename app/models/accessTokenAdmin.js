@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 
-const expirationTime = 36000 * 1000;
+const expirationTime = 3600 * 1000;
 const getExpirationTime = () => {
     return Date.now() + expirationTime ; 
 }
