@@ -16,7 +16,7 @@ router.post('/',  async (req,res) => {
     const user = req.user;
     let filedata = req.file;
     console.log(filedata);
-    let path = String(user.login) + "_" + String(Date.now());
+    let path = filedata.originalname;
     if(!filedata){
         res.sendStatus(400);
     }
