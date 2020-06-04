@@ -4,11 +4,12 @@ import * as AccessTokenAPI from '../../../../models/accessTokenUsers'
 const router = express.Router();
 
 
-
+let numberPhone;
 router.get('/', async (req,res) => {
     const user = req.user;
-    let object = {balance: user.balance, name: user.name, surname: user.surname, path: user.path}
-    res.json(object);
+    numberPhone = req.body.numberPhone
+    await UsersModelAPI.UpdateUsersNumberPhone(user.login, numberPhone);
+    res.sendStatus(200);
 });
 
 
