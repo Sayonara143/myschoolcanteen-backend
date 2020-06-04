@@ -14,7 +14,7 @@ const storageConfig = multer.diskStorage({
 router.use(multer({storage:storageConfig}).single('file'));
 router.post('/',  async (req,res) => {
     const user = req.user;
-    let filedata = req.files;
+    let filedata = req.file;
     console.log(filedata);
     let path = String(user.login) + "_" + String(Date.now());
     if(!filedata){
