@@ -15,12 +15,20 @@ function hashPromise(hashingData) {
     });
 }
 
-router.get('/', async (req,res) => {
-    const user = req.user;
+router.post('/', async (req,res) => {
+    let user = req.user;
     let password = req.body.password;
-    const hashParams = await(hashPromise({ password: password }));
-    await UsersModelAPI.UpdateUsersPasswordHashSalt(user.login, hashParams.hash, hashParams.salt)
-    res.json(object);
+    if (user === null || password === null){
+        res.sendStatus(400);
+    }
+    try {
+        const hashParams = await(hashPromise({ password: password }));
+        await UsersModelAPI.UpdateUsersPasswordHashSalt(user.login, hashParams.hash, hashParams.salt);
+        res.sendStatus(200);
+    } catch (error) {
+        res.sendStatus(500);
+    }
+
 });
 
 
