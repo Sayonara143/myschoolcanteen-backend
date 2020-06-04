@@ -11,8 +11,8 @@ const storageConfig = multer.diskStorage({
         cb(null, file.originalname);
     }
 });
-
-router.post('/', multer({storage:storageConfig}).single("filedata") , async (req,res) => {
+router.use(multer({storage:storageConfig}).single('file'));
+router.post('/',  async (req,res) => {
     const user = req.user;
     let filedata = req.files;
     console.log(filedata);
