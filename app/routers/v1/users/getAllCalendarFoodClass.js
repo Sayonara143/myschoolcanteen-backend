@@ -26,6 +26,11 @@ router.post('/', async (req,res) => {
         }
 
     }
+    calendar.sort(function(a,b){
+        var c = new Date(a.date);
+        var d = new Date(b.date);
+        return c-d;
+    })
     res.json(calendar);
 });
 
