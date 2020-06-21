@@ -5,10 +5,21 @@ const router = express.Router();
 
 
 router.get('/', async (req,res) => {
+    const calendar = [];
     const user = req.user;
-    const date = req.body.date;
+    const dateOne = req.body.dateOne;
+    const dateTwo = req.body.dateTwo;
     const calendarFood = await CalendarFoodModelAPI.findAllCalendarFoodClass(user.admin);
-    res.json(calendarFood);
+    let length = calendarFood.length;
+    for(let i = 0; i < (length + 1); i++) {
+        if(dateOne < calendarFood[i].date ) {
+            if(calendarFood[i].date < dateTwo){
+                calendar.push(calendarFood[i])
+            }
+        }
+
+    }
+    res.json(calendar);
 });
 
 
