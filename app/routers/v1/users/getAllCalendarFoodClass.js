@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 
-router.get('/', async (req,res) => {
+router.post('/', async (req,res) => {
     const calendar = [];
     const user = req.user;
     const dateOne = req.body.dateOne;
