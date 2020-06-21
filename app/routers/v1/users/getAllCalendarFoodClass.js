@@ -15,9 +15,8 @@ router.post('/', async (req,res) => {
     let length = calendarFood.length;
     console.log(calendarFood);
     for(let i = 0; i < (length); i++) {
-        arr = calendarFood[i].date.split("T");
-        if(dateOne < arr[0] ) {
-            if(arr[0] < dateTwo){
+        if(dateOne < calendarFood[i].date ) {
+            if(calendarFood[i].date < dateTwo){
                 calendar.push(calendarFood[i])
             }
         }
