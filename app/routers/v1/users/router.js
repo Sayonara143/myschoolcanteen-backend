@@ -8,7 +8,9 @@ import getYourBalance from './getYourBalance';
 import sync from './sync'
 import getSettings from './getSettings'
 import change from './changeUsersData/router'
+import notice from './noticeDayWhenEat'
 
+router.use('/notice', notice);
 router.use('/change', change);
 router.use('/sync', sync);
 router.use('/settings', getSettings);

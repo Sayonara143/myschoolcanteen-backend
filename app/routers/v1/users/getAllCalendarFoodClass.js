@@ -5,7 +5,6 @@ const router = express.Router();
 
 
 router.post('/', async (req,res) => {
-    let arr;
     const calendar = [];
     const user = req.user;
     const dateOne = req.body.dateOne;
@@ -16,11 +15,9 @@ router.post('/', async (req,res) => {
     let length = calendarFood.length;
     console.log(calendarFood);
     for(let i = 0; i < (length); i++) {
-        arr = String(calendarFood[i].date);
-        arr = arr.split("T");
-        console.log(arr);
-        if(dateOne < arr ) {
-            if(arr < dateTwo){
+ 
+        if( new Date(dateOne) < new Date(calendarFood[i].date) ) {
+            if(new Date(calendarFood[i].date) <  new Date(dateTwo)){
                 calendar.push(calendarFood[i])
             }
         }
