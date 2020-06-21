@@ -9,8 +9,11 @@ router.post('/', async (req,res) => {
     const user = req.user;
     const dateOne = req.body.dateOne;
     const dateTwo = req.body.dateTwo;
+    console.log(dateOne);
+    console.log(dateTwo);
     const calendarFood = await CalendarFoodModelAPI.findAllCalendarFoodClass(user.admin);
     let length = calendarFood.length;
+    console.log(calendarFood);
     for(let i = 0; i < (length + 1); i++) {
         if(dateOne < calendarFood[i].date ) {
             if(calendarFood[i].date < dateTwo){
