@@ -15,7 +15,7 @@ function hashPromise(hashingData) {
 }
 
 const checkInput = (input) => {
-    if (input.name === null || input.login === null || input.surname === null ||  input.patronymic === null ||  input.numberPhone === null ) {
+    if (input.name === null || input.login === null || input.surname === null ||  input.patronymic === null ||  input.numberPhone === null || input.password === null || input.ticket === null) {
         return false;
 
     }
@@ -25,12 +25,11 @@ const checkInput = (input) => {
 
 router.post('/', async (req, res)=>{
     data = req.body
-    const admin =req.admin.login
+    const admin = req.admin.login
     if(!checkInput(data)){
-        res.sendstatus(400)
+        res.status(400).json({error: "data is not found"})
         return 
     } 
-
 
     const { name, surname, patronymic, login, password, ticket, numberPhone} = data
 
@@ -58,7 +57,7 @@ router.post('/', async (req, res)=>{
     }
     catch (err) {
         console.error(err)
-        res.sendstatus(500)
+        res.res.status(500).json({error: "sorry, the server crashed"});
 
     }
 })

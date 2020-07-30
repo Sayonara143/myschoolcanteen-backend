@@ -8,7 +8,14 @@ const router = express.Router();
 router.get('/', async (req,res) => {
     const user = req.user;
     let object = {balance: user.balance, name: user.name, surname: user.surname, path: user.path}
-    res.json(object);
+    try {
+        res.json(object);
+    }
+    catch(err) {
+        console.log(err)
+        res.status(500).json({error: "sorry, the server crashed"});
+    }
+    
 });
 
 

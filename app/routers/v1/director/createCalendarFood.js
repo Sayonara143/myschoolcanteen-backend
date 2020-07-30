@@ -3,8 +3,6 @@ const router = express.Router();
 import * as CalendarFoodModelAPI from '../../../models/calendarFood'
 
 
-
-
 const checkInput = (input) => {
     if ( input.date === null ||  input.summa === null || input.adminClass === null) {
         return false;
@@ -13,14 +11,12 @@ const checkInput = (input) => {
     else return true;
 }
 
-
 router.post('/', async (req, res)=>{
     const data = req.body
     if(!checkInput(data)){
         res.sendStatus(400)
         return 
     } 
-
 
     const { adminClass, date, title, summa, one, two, three, four, five, six} = data
 
@@ -32,7 +28,7 @@ router.post('/', async (req, res)=>{
             three: three,
             four: four,
             five: five, 
-            six: six   ,     
+            six: six,     
             adminClass: adminClass,
             summa: summa,
             date: date,  
