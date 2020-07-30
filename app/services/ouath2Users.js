@@ -39,9 +39,8 @@ async function token(req, res) {
     console.log('req.body',req.body)
     try {
         let user = await UsersAPI.findUserByLogin(login);
-        console.log(user);
         if (!user) {
-            res.sendStatus(404);
+            res.status(404).json({error: "user not found"});
             return;
         }
        
@@ -58,13 +57,13 @@ async function token(req, res) {
                 accessToken: accessToken.value,
                 refreshToken: refreshToken.value
             });
+        }else{
+            res.status(404).json({error: "error password"});
         }
-        else
-            res.sendStatus(404);
     }
     catch (err) {
         console.error(err);
-        res.sendStatus(500);
+        res.status(500).json({error: "sorry, the server crashed"});
     }
 }
  
@@ -105,14 +104,14 @@ async function refresh(req, res) {
         //find refresh token
         let refreshToken = await RefreshTokenAPI.findByValue(token);
         if (!refreshToken) {
-            res.sendStatus(404);
+            res.status(404).json({error: "token is not found"});
             return;
         }
  
         //find user
         let user = await UsersAPI.findUserByLogin(refreshToken.user);
         if (!user) {
-            res.sendStatus(404);
+            res.status(404).json({error: "the user's token search failed"});
             return;
         }
  
@@ -127,7 +126,7 @@ async function refresh(req, res) {
     }
     catch (err) {
         console.error(err);
-        res.sendStatus(500);
+        res.status(500).json({error: "sorry, the server crashed"});
     }
 }
 

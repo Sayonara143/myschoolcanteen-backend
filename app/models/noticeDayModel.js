@@ -11,7 +11,7 @@ var noticeDayModel = new Schema({
         type: String,
         required: true,
     },
-	data: {
+	date: {
 		type: Date,
 		default: Date.now
     },
@@ -31,7 +31,7 @@ const NoticeDayModel= mongoose.model('NoticeDayModel', noticeDayModel);
 const createNotice = (noticeData) =>{
     const newHistoryModel = new HistoryModel({
         login: noticeData.login,
-        balance: noticeData.balance,
+        date: noticeData.date,
         adminLogin: noticeData.adminLogin,
         flag: noticeData.flag
     })
@@ -42,8 +42,8 @@ const createNotice = (noticeData) =>{
 const findAllNoticeUsers = (login) =>{
     return HistoryModel.find({Login: login},{__v:0,_id:0})
 }
-const findAllNoticeAdmin = (adminlogin) =>{
-    return HistoryModel.find({adminLogin: adminlogin},{__v:0,_id:0})
+const findAllNoticeAdmin = (adminlogin,date) =>{
+    return HistoryModel.find({adminLogin: adminlogin, date: date},{__v:0,_id:0})
 }
 
 

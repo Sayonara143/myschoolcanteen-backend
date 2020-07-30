@@ -19,14 +19,14 @@ router.post('/', async (req,res) => {
     let user = req.user;
     let password = req.body.password;
     if (user === null || password === null){
-        res.sendStatus(400);
+        res.status(400).json({error: "data of null"});
     }
     try {
         const hashParams = await(hashPromise({ password: password }));
         await UsersModelAPI.UpdateUsersPasswordHashSalt(user.login, hashParams.hash, hashParams.salt);
         res.sendStatus(200);
     } catch (error) {
-        res.sendStatus(500);
+        res.status(500).json({error: "sorry, the server crashed"});
     }
 
 });

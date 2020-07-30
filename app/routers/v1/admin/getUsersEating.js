@@ -8,7 +8,7 @@ const router = express.Router();
 router.post('/', async (req,res) => {
     const data = req.body;
     try{
-        let notice =  await NoticeApi.findAllNoticeAdmin(data.adminLogin, data.date)
+        let notice =  await NoticeApi.findAllNoticeAdmin(data.adminLogin)
         res.json(notice);
     }
     catch(error){

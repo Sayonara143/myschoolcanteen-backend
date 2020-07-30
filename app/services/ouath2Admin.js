@@ -38,9 +38,8 @@ async function token(req, res) {
     console.log('req.body',req.body)
     try {
         let admin = await AdminAPI.findAdminByLogin(login)
-        console.log(admin);
         if (!admin) {
-            res.sendStatus(404);
+            res.status(404).json({error: "admin not found"});
             return;
         }
        
@@ -57,9 +56,9 @@ async function token(req, res) {
                 accessToken: accessToken.value,
                 refreshToken: refreshToken.value
             });
+        }else{
+            res.status(404).json({error: "error password"});
         }
-        else
-            res.sendStatus(404);
     }
     catch (err) {
         console.error(err);
@@ -103,14 +102,14 @@ async function refresh(req, res) {
         //find refresh token
         let refreshToken = await RefreshTokenAPI.findByValue(token);
         if (!refreshToken) {
-            res.sendStatus(404);
+            res.status(404).json({error: "token is not found"});
             return;
         }
  
         //find user
         let admin = await AdminAPI.findAdminByLogin(refreshToken.admin);
         if (!admin) {
-            res.sendStatus(404);
+            res.status(404).json({error: "the user's token search failed"});
             return;
         }
  
