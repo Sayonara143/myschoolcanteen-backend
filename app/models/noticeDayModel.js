@@ -29,21 +29,21 @@ const NoticeDayModel= mongoose.model('NoticeDayModel', noticeDayModel);
 
 
 const createNotice = (noticeData) =>{
-    const newHistoryModel = new HistoryModel({
+    const newNoticeDayModel = new NoticeDayModel({
         login: noticeData.login,
         date: noticeData.date,
         adminLogin: noticeData.adminLogin,
         flag: noticeData.flag
     })
-    return newHistoryModel.save();
+    return newNoticeDayModel.save();
 }
 
 
 const findAllNoticeUsers = (login) =>{
-    return HistoryModel.find({Login: login},{__v:0,_id:0})
+    return NoticeDayModel.find({Login: login},{__v:0,_id:0})
 }
 const findAllNoticeAdmin = (adminlogin,date) =>{
-    return HistoryModel.find({adminLogin: adminlogin, date: date},{__v:0,_id:0})
+    return NoticeDayModel.find({adminLogin: adminlogin, date: date},{__v:0,_id:0})
 }
 
 

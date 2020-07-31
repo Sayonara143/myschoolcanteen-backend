@@ -1,6 +1,6 @@
 import express from 'express'
 const router = express.Router();
-import * as DirectorAPI from '../../models/directorModel'
+import * as AdminAPI from '../../../models/adminModel'
 import hashkod from 'pbkdf2-password'
 let data;
 const hash = hashkod();
@@ -34,10 +34,10 @@ router.post('/', async (req, res)=>{
     const { name, surname, patronymic, login, password} = data
 
     try {
-        const director = await DirectorAPI.findDirectorByLogin(login)
-        if (!director) {
+        const admin = await AdminAPI.findAdminByLogin(login)
+        if (!admin) {
             const hashParams = await(hashPromise({ password: password }));
-            const newDirectorData = {
+            const newAdminData = {
                 name: name, 
                 surname: surname, 
                 patronymic: patronymic,
@@ -45,7 +45,7 @@ router.post('/', async (req, res)=>{
                 passwordHash: hashParams.hash,
                 salt: hashParams.salt
             }
-            await DirectorAPI.createDirector(newDirectorData)
+            await AdminAPI.createAdmin(newAdminData)
             res.sendStatus(200)
         }
         else {

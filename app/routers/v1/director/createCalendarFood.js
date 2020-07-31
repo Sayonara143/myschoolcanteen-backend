@@ -1,6 +1,7 @@
 import express from 'express'
 const router = express.Router();
 import * as CalendarFoodModelAPI from '../../../models/calendarFood'
+import * as ClassAPI from '../../../models/classModel'
 
 
 const checkInput = (input) => {
@@ -18,9 +19,11 @@ router.post('/', async (req, res)=>{
         return 
     } 
 
-    const { adminClass, date, title, summa, one, two, three, four, five, six} = data
+    const { numberClass, date, title, summa, one, two, three, four, five, six} = data
 
     try {
+        let dataClass = await ClassAPI.findClassByClass(numberClass) 
+        console.log(dataClass[0].adminLogin)
         const newCalendarData = {  
             title: title,
             one: one,
@@ -29,7 +32,7 @@ router.post('/', async (req, res)=>{
             four: four,
             five: five, 
             six: six,     
-            adminClass: adminClass,
+            adminClass: dataClass[0].adminLogin,
             summa: summa,
             date: date,  
         }
