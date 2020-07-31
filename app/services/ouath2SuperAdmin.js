@@ -1,7 +1,7 @@
 let uid = require('uid-safe');
 import * as AccessTokenAPI from '../models/accessTokenSuperAdmin'
 import * as RefreshTokenAPI from '../models/refreshTokenSuperAdmin'
-import * as SuperAdminAPI from '../models/SuperAdminModel'
+import * as SuperAdminAPI from '../models/superAdminModel'
 
 
 

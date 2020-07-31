@@ -42,14 +42,14 @@ var superAdminModel = new Schema({
 const SuperAdminModel = mongoose.model('SuperAdminModel', superAdminModel);
 
 
-const createSuperAdmin = (SuperadminData) =>{
+const createSuperAdmin = (SuperAdminData) =>{
     const newSuperAdminModel = new SuperAdminModel({
-        surname: SuperadminData.surname,
-        name: SuperadminData.name,
-        patronymic: SuperadminData.patronymic,
-        login: SuperadminData.login,
-        passwordHash: SuperadminData.passwordHash,
-        salt: SuperadminData.salt,
+        surname: SuperAdminData.surname,
+        name: SuperAdminData.name,
+        patronymic: SuperAdminData.patronymic,
+        login: SuperAdminData.login,
+        passwordHash: SuperAdminData.passwordHash,
+        salt: SuperAdminData.salt,
     })
     return newSuperAdminModel.save();
 }

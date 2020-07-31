@@ -1,6 +1,6 @@
 import express from 'express'
 const router = express.Router();
-import * as SuperAdminAPI from '../../models/SuperAdminModel'
+import * as SuperAdminAPI from '../../models/superAdminModel'
 import hashkod from 'pbkdf2-password'
 let data;
 const hash = hashkod();
