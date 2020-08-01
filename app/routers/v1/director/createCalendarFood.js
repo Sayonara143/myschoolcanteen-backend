@@ -22,22 +22,27 @@ router.post('/', async (req, res)=>{
     const { numberClass, date, title, summa, one, two, three, four, five, six} = data
 
     try {
-        let dataClass = await ClassAPI.findClassByClass(numberClass) 
-        console.log(dataClass[0].adminLogin)
-        const newCalendarData = {  
-            title: title,
-            one: one,
-            two: two,
-            three: three,
-            four: four,
-            five: five, 
-            six: six,     
-            adminClass: dataClass[0].adminLogin,
-            summa: summa,
-            date: date,  
+        let dataClass = await ClassAPI.findClassByClass(numberClass)
+        if(dataClass){
+            console.log(dataClass[0].adminLogin)
+            const newCalendarData = {  
+                title: title,
+                one: one,
+                two: two,
+                three: three,
+                four: four,
+                five: five, 
+                six: six,     
+                adminClass: dataClass[0].adminLogin,
+                summa: summa,
+                date: date,  
+            }
+            await CalendarFoodModelAPI.createCalendarFood(newCalendarData)
+            res.sendStatus(200)
+        }else{
+            res.sendStatus(400)
         }
-        await CalendarFoodModelAPI.createCalendarFood(newCalendarData)
-        res.sendStatus(200)
+        
           
     }
     catch (err) {

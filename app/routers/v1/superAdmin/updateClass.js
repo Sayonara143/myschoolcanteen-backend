@@ -20,13 +20,8 @@ router.post('/', async (req, res)=>{
     const { adminLogin, numberClass } = data
 
     try {
-        const newClassData = {  
-            class: numberClass,   
-            adminLogin: adminLogin,
-        }
-        await ClassAPI.createClass(newClassData)
-        res.sendStatus(200)
-          
+        await ClassAPI.UpdateClassAdminLogin(numberClass, adminLogin)
+        res.sendStatus(200)  
     }
     catch (err) {
         console.error(err)
