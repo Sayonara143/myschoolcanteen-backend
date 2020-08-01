@@ -13,24 +13,29 @@ const checkInput = (input) => {
 router.post('/', async (req, res)=>{
     const data = req.body
     if(!checkInput(data)){
-        res.sendStatus(400)
+        res.status(400).json({error: "data is undefinded"})
         return 
     } 
 
     const { adminLogin, numberClass } = data
 
     try {
-        const newClassData = {  
-            class: numberClass,   
-            adminLogin: adminLogin,
+        let schoolClass = await ClassAPI.findClassByClass(numberClass)
+        if(!schoolClass) {
+            const newClassData = {  
+                class: numberClass,   
+                adminLogin: adminLogin,
+            }
+            await ClassAPI.createClass(newClassData)
+            res.sendStatus(200)
+        } else{
+            res.status(409).json({ schoolClassFound: true })
         }
-        await ClassAPI.createClass(newClassData)
-        res.sendStatus(200)
-          
+        
     }
     catch (err) {
         console.error(err)
-        res.sendStatus(500)
+        res.status(500).json({error: "sorry, the server crashed"});
 
     }
 })

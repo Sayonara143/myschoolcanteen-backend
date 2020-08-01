@@ -20,8 +20,18 @@ router.post('/', async (req, res)=>{
     const { adminLogin, numberClass } = data
 
     try {
-        await ClassAPI.UpdateClassAdminLogin(numberClass, adminLogin)
-        res.sendStatus(200)  
+        let schoolClass = await ClassAPI.findClassByClass(numberClass)
+        if(schoolClass){
+            let ok = await ClassAPI.UpdateClassAdminLogin(numberClass, adminLogin)
+            if(!(ok.nModified == 0)){
+                res.sendStatus(200) 
+            }else{
+                res.status(400).json({error: "Bad request, failed to update"})
+            }
+        } else{
+            res.status(400).json({error: "schoolClass is undefinded"})
+        }
+         
     }
     catch (err) {
         console.error(err)

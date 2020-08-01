@@ -26,7 +26,7 @@ const checkInput = (input) => {
 router.post('/', async (req, res)=>{
     data = req.body
     if(!checkInput(data)){
-        res.sendStatus(400)
+        res.status(400).json({error: "data is undefinded"})
         return 
     } 
 
