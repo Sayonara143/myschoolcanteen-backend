@@ -8,7 +8,7 @@ router.delete('/:login', async (req,res) => {
     try {
         let login = req.params.login
         if (login){
-            let process = await UsersModelAPI.DeleteUsersByLogin(login)
+            let process = await UsersModelAPI.deleteUsersByLogin(login)
             if (process.n == 1){
                 res.sendStatus(200)
             } else{

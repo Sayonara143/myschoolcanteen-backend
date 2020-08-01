@@ -117,7 +117,7 @@ const UpdateUsersPath = (login,path) => {
 const UpdateUsersPasswordHashSalt = (login, passwordHash, salt) => {
 	return UsersModel.updateOne({login:login},{passwordHash:passwordHash,salt:salt }, {upsert: false, multi: true})
 }
-const DeleteUsersByLogin = (login) => {
+const deleteUsersByLogin = (login) => {
     return UsersModel.deleteOne({login: login})
 }
 
@@ -137,5 +137,5 @@ export{
     UpdateUsersNumberPhone,
     UpdateUsersPath, 
     UpdateUsersPasswordHashSalt,
-    DeleteUsersByLogin
+    deleteUsersByLogin
 }
