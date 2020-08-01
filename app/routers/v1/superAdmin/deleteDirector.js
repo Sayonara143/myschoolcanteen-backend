@@ -19,7 +19,7 @@ router.delete('/:login', async (req,res) => {
         }
 
     } catch (error) {
-        res.status(500).json({})
+        res.status(500).json({error: "sorry, the server crashed"})
     }
 });
 

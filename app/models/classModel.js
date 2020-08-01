@@ -46,6 +46,9 @@ const findClassByClass = (numberClass) =>{
 const UpdateClassAdminLogin = (numberClass, adminLogin) => {
 	return ClassModel.updateOne({class: numberClass},{adminLogin: adminLogin}, {upsert: false})
 }
+const deleteClassByClass = (numberClass) => {
+    return ClassModel.deleteOne({class: numberClass})
+}
 
 
 export{ 
@@ -53,5 +56,6 @@ export{
     findAllClass,
     findClassByAdminLogin,
     findClassByClass,
-    UpdateClassAdminLogin
+    UpdateClassAdminLogin,
+    deleteClassByClass
 }
