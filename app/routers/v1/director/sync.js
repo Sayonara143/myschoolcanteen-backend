@@ -4,7 +4,8 @@ const router = express.Router();
 
 router.get('/', async (req,res) => {
     try {
-        res.status(200).json({status: 'ok'});
+        let director = req.director
+        res.json({name: director.name, surname: director.surname});
     } catch (err) {
         console.error(err);
         res.status(500).json({error: "sorry, the server crashed"});

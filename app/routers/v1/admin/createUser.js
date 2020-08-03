@@ -31,7 +31,7 @@ router.post('/', async (req, res)=>{
         return 
     } 
 
-    const { name, surname, patronymic, login, password, ticket, numberPhone} = data
+    const { name, surname, patronymic, login, password, ticket} = data
 
     try {
         const user = await UsersModelAPI.findUserByLogin(login)
@@ -44,7 +44,6 @@ router.post('/', async (req, res)=>{
                 login: login, 
                 admin: admin,
                 ticket: ticket,
-                numberPhone: numberPhone,
                 passwordHash: hashParams.hash,
                 salt: hashParams.salt
             }

@@ -9,10 +9,7 @@ router.get('/', async (req,res) => {
     const name = data.name;
     const surname = data.surname;
     const patronymic = data.patronymic;
-    const email = data.email;
-    const phone = data.numberPhone;
-    const path = data.path;
-    const object = {name: name, surname: surname, patronymic: patronymic, email: email, phone: phone, path: path};
+    const object = {name: name, surname: surname, patronymic: patronymic};
     res.json(object)
 });
 

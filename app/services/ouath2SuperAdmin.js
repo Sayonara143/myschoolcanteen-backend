@@ -81,7 +81,7 @@ async function authorize(req, res, next) {
             res.sendStatus(401);
         }
  
-        req.admin = admin;
+        req.superAdmin = admin;
         next();
     }
     catch (err) {
