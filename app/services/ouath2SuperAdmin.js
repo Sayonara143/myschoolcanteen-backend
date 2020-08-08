@@ -115,11 +115,14 @@ async function refresh(req, res) {
  
         //remove old access token
         await  AccessTokenAPI.deleteBySuperAdminLogin(admin.login);
+        await  RefreshTokenAPI.deleteBySuperAdminLogin(admin.login);
  
         //create new access token
         let newAccessToken = await AccessTokenAPI.create(await createToken(), admin.login);
+        let newRefreshToken = await RefreshTokenAPI.create(await createToken(), admin.login);
         res.status(200).json({
-            accessToken: newAccessToken.value
+            accessToken: newAccessToken.value,
+            refreshToken: newRefreshToken.value
         });
     }
     catch (err) {

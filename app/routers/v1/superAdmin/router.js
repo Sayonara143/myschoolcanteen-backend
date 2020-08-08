@@ -13,6 +13,8 @@ import deleteAdmin from './deleteAdmin'
 import deleteDirector from './deleteDirector'
 import deleteClass from './deleteClass'
 
+import out from './out'
+
 router.use('/createAdmin', createAdmin);
 router.use('/createDirector', createDirector);
 
@@ -23,6 +25,8 @@ router.use('/deleteUser', deleteUser)
 router.use('/deleteAdmin', deleteAdmin)
 router.use('/deleteDirector', deleteDirector)
 router.use('/deleteClass', deleteClass)
+
+router.use('/out', out)
 
 router.use('/sync', sync);
 
