@@ -11,9 +11,9 @@ let removedOne,
 let calendarResponse;
 
 let number;
-const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
 function sorting (calendar) {
-    console.log(cl.length)
     for (let i = 0; i < cl.length; i++) {
         if(cl[i] === '1'){
             cl[i] = {summa: 'пусто'}
@@ -22,8 +22,8 @@ function sorting (calendar) {
             calendar[i] = {summa: 'пусто'}
         } else {
             number =  calendar[i].date.getDate()
-            console.log(number)
-            cl[number-1] =calendar[i]
+            
+            cl[number-1] = calendar[i]
         }
         
     }
@@ -34,7 +34,7 @@ router.post('/', async (req,res) => {
     let calendar = [];
     const user = req.user;
     const dateOne = req.body.dateOne;
-    const calendarFood = await CalendarFoodModelAPI.findAllCalendarFoodClass(user.admin);
+    let calendarFood = await CalendarFoodModelAPI.findAllCalendarFoodClassNoInfa(user.admin);
 
     let length = calendarFood.length;
     let date;
@@ -53,6 +53,7 @@ router.post('/', async (req,res) => {
     })
     cal = ['1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1']
     for (let i = 0; i < calendar.length; i++) {
+
         cal[i] = calendar[i]
     }
     sorting(cal)

@@ -126,6 +126,10 @@ const findAllCalendarFoodClass = (adminClass) =>{
     return CalendarFoodModel.find({adminClass: adminClass},{__v0:0})
 }
 
+const findAllCalendarFoodClassNoInfa = (adminClass) =>{
+    return CalendarFoodModel.find({adminClass: adminClass},{__v0:0, one:0, two:0, three:0, four:0, five:0, six:0, title:0})
+}
+
 const findAllCalendarFood = () =>{
     return CalendarFoodModel.find({},{__v0:0})
 }
@@ -134,4 +138,5 @@ export{
     findAllCalendarFoodClass,
     createCalendarFood,
     findAllCalendarFood,
+    findAllCalendarFoodClassNoInfa
 }
