@@ -13,6 +13,11 @@ const uri = "mongodb+srv://AlexBykov:alexbykov123school@myschoolcanteen-dan2k.mo
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true  },  () => {
 	console.log("[MONGODB] connect")
 })
+const corsOptions = {
+	origin: ['*', 'http://localhost:3000'],
+	optionsSuccessStatus: 200,
+	credentials: true // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 
 const app = express();
 app.use(function(req, res, next) {
@@ -21,7 +26,7 @@ app.use(function(req, res, next) {
 	next();
 });
 
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(logger('dev'));
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({limit: '50mb', extended: true}));
