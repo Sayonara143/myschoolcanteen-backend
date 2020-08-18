@@ -1,34 +1,37 @@
 import express from 'express'
 import * as CalendarFoodModelAPI from '../../../models/calendarFood'
 const router = express.Router();
-
+let cal = ['1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1']
+let cl = ['1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1']
 let removedOne,
     removedTwo,
     removedThree,
-    removedFour;
+    removedFour,
+    removedFive;
 let calendarResponse;
 
+let number;
 const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-async function completion (long, name){
-    let count = long - name.length
-    if(count > 3){ 
-        count = long - count
+function sorting (calendar) {
+    console.log(cl.length)
+    for (let i = 0; i < cl.length; i++) {
+        if(cl[i] === '1'){
+            cl[i] = {summa: 'пусто'}
+        }
+        if(calendar[i] === '1'){
+            calendar[i] = {summa: 'пусто'}
+        } else {
+            number =  calendar[i].date.getDate()
+            console.log(number)
+            cl[number-1] =calendar[i]
+        }
+        
+    }
 
-    }
-    for (let i = name.length; count < long; i++) {
-        name[count] = {summа: 'Пусто'}  
-        count++
-    }
-}
-async function already () {
-    await completion(6, removedOne)
-    await completion(6, removedTwo)
-    await completion(6, removedThree)
-    await completion(6, removedFour)
 }
 
 router.post('/', async (req,res) => {
-    const calendar = [];
+    let calendar = [];
     const user = req.user;
     const dateOne = req.body.dateOne;
     const calendarFood = await CalendarFoodModelAPI.findAllCalendarFoodClass(user.admin);
@@ -48,19 +51,25 @@ router.post('/', async (req,res) => {
         var d = new Date(b.date);
         return c-d;
     })
+    cal = ['1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1']
+    for (let i = 0; i < calendar.length; i++) {
+        cal[i] = calendar[i]
+    }
+    sorting(cal)
+    //await already()
+    removedOne = cl.slice(0,7)
+    removedTwo = cl.slice(7,14)
+    removedThree =cl.slice(14,21)
+    removedFour = cl.slice(21,28)
+    removedFive = cl.slice(28,35)
 
-    removedOne = calendar.splice(0, 6);
-    removedTwo = calendar.splice(6, 13);
-    removedThree = calendar.splice(13, 20);
-    removedFour = calendar.splice(20, 27);
-
-    await already()
-    
     calendarResponse = {
         removedOne,
         removedTwo,
         removedThree,
-        removedFour
+        removedFour,
+        removedFive,
+
     }
     res.json(calendarResponse);
 });
