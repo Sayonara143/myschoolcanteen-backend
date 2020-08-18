@@ -37,6 +37,6 @@ const server = http.createServer(app);
 //createIOsocket(server);
 
 
-server.listen(8080, '0.0.0.0',async ()=>{
+server.listen(3000, '0.0.0.0',async ()=>{
 	console.log("[SERVER] start")
 });

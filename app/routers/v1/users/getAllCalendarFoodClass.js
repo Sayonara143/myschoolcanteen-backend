@@ -2,6 +2,11 @@ import express from 'express'
 import * as CalendarFoodModelAPI from '../../../models/calendarFood'
 const router = express.Router();
 
+let removedOne,
+    removedTwo,
+    removedThree,
+    removedFour;
+let calendarResponse;
 
 
 router.post('/', async (req,res) => {
@@ -28,7 +33,17 @@ router.post('/', async (req,res) => {
         var d = new Date(b.date);
         return c-d;
     })
-    res.json(calendar);
+    removedOne = calendar.splice(0, 6);
+    removedTwo = calendar.splice(6, 13);
+    removedThree = calendar.splice(13, 20);
+    removedFour = calendar.splice(20, 27);
+    calendarResponse = {
+        removedOne,
+        removedTwo,
+        removedThree,
+        removedFour
+    }
+    res.json(calendarResponse);
 });
 
 
