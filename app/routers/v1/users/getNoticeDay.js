@@ -22,7 +22,7 @@ router.post('/', async(req, res) => {
                 date: data.date
             }
             const notice = await NoticeApi.findNoticeUser(list)
-            res.status(200).json(list);
+            res.status(200).json(notice);
         } catch (error) {
             res.sendStatus(500);
             console.log(error.message);
