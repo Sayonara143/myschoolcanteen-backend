@@ -12,7 +12,7 @@ router.post('/', async(req, res) => {
         let respons
         let dataClass = await ClassAPI.findClassByClass(req.body.numberClass)
         if (dataClass) {
-            let food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdmin(req.body.date, dataClass.adminLogin)
+            let food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(req.body.date, dataClass.adminLogin, req.body.ticket)
             if (food) {
 
                 res.status(200).json(food)
