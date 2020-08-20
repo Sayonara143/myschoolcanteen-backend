@@ -5,51 +5,44 @@ import * as ClassAPI from '../../../models/classModel'
 
 
 const checkInput = (input) => {
-    if ( input.date === null ||  input.summa === null || input.adminClass === null) {
+    if (input.date === null || input.summa === null || input.adminClass === null || input.eat === null || input.numberClass === null) {
         return false;
 
-    }
-    else return true;
+    } else return true;
 }
 
-router.post('/', async (req, res)=>{
+router.post('/', async(req, res) => {
     const data = req.body
-    if(!checkInput(data)){
+    if (!checkInput(data)) {
         res.sendStatus(400)
-        return 
-    } 
+        return
+    }
 
-    const { numberClass, date, title, summa, one, two, three, four, five, six} = data
+    const { numberClass, date, title, summa, eat } = data
 
     try {
         let dataClass = await ClassAPI.findClassByClass(numberClass)
-        if(dataClass){
+        if (dataClass) {
             console.log(dataClass[0].adminLogin)
-            const newCalendarData = {  
+            const newCalendarData = {
                 title: title,
-                one: one,
-                two: two,
-                three: three,
-                four: four,
-                five: five, 
-                six: six,     
+                eat: eat,
                 adminClass: dataClass[0].adminLogin,
                 summa: summa,
-                date: date,  
+                date: date,
             }
             await CalendarFoodModelAPI.createCalendarFood(newCalendarData)
             res.sendStatus(200)
-        }else{
+        } else {
             res.sendStatus(400)
         }
-        
-          
-    }
-    catch (err) {
+
+
+    } catch (err) {
         console.error(err)
         res.sendStatus(500)
 
     }
 })
 
-export default router 
+export default router
