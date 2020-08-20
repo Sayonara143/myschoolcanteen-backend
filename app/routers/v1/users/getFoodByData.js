@@ -6,14 +6,9 @@ import * as ClassAPI from '../../../models/classModel'
 
 router.post('/', async(req, res) => {
     try {
-        if (dataClass) {
-            let food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(req.body.date, req.user.admin, req.user.ticket)
-            if (food) {
-
-                res.status(200).json(food)
-            } else {
-                res.sendStatus(400)
-            }
+        let food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(req.body.date, req.user.admin, req.user.ticket)
+        if (food) {
+            res.status(200).json(food)
         } else {
             res.sendStatus(400)
         }
