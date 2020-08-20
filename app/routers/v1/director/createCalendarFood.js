@@ -18,16 +18,14 @@ router.post('/', async(req, res) => {
         return
     }
 
-    const { numberClass, date, title, summa, eat } = data
+    const { numberClass, date, summa, eat } = data
 
     try {
         let dataClass = await ClassAPI.findClassByClass(numberClass)
         if (dataClass) {
-            console.log(dataClass[0].adminLogin)
             const newCalendarData = {
-                title: title,
                 eat: eat,
-                adminClass: dataClass[0].adminLogin,
+                adminClass: dataClass.adminLogin,
                 summa: summa,
                 date: date,
             }
