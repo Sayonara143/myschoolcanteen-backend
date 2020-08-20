@@ -7,6 +7,10 @@ var calendarFood = new Schema({
         type: Array,
         required: true,
     },
+    ticket: {
+        type: String,
+        required: true,
+    },
     adminClass: {
         type: String,
         required: true,
@@ -31,6 +35,7 @@ const CalendarFoodModel = mongoose.model('CalendarFoodModel', calendarFood);
 const createCalendarFood = (CalendarFoodData) => {
     const newCalendarFoodModel = new CalendarFoodModel({
         eat: CalendarFoodData.eat,
+        ticket: CalendarFoodData.ticket,
         adminClass: CalendarFoodData.adminClass,
         date: CalendarFoodData.date,
         summa: CalendarFoodData.summa,
@@ -55,7 +60,7 @@ const findCalendarFoodByDateAndAdmin = (date, adminClass) => {
 }
 
 const UpdateCalendarFood = (list) => {
-    return CalendarFoodModel.updateMany({ adminClass: list.adminClass, date: list.date }, { eat: list.eat, summa: list.price }, { upsert: false })
+    return CalendarFoodModel.updateMany({ adminClass: list.adminClass, date: list.date, ticket: list.ticket }, { eat: list.eat, summa: list.price }, { upsert: false })
 }
 
 export {

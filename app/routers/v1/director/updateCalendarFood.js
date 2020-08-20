@@ -18,7 +18,7 @@ router.post('/', async(req, res) => {
         return
     }
 
-    const { numberClass, date, summa, eat } = data
+    const { numberClass, date, summa, eat, ticket } = data
 
     try {
         let dataClass = await ClassAPI.findClassByClass(numberClass)
@@ -28,6 +28,7 @@ router.post('/', async(req, res) => {
                 adminClass: dataClass.adminLogin,
                 summa: summa,
                 date: date,
+                ticket: ticket
             }
             await CalendarFoodModelAPI.UpdateCalendarFood(newCalendarData)
             res.sendStatus(200)

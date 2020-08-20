@@ -5,7 +5,7 @@ import * as ClassAPI from '../../../models/classModel'
 
 
 const checkInput = (input) => {
-    if (input.date === null || input.summa === null || input.adminClass === null || input.eat === null || input.numberClass === null) {
+    if (input.date === null || input.summa === null || input.adminClass === null || input.eat === null || input.numberClass === null || input.ticket === null) {
         return false;
 
     } else return true;
@@ -18,7 +18,7 @@ router.post('/', async(req, res) => {
         return
     }
 
-    const { numberClass, date, summa, eat } = data
+    const { numberClass, date, summa, eat, ticket } = data
 
     try {
         let dataClass = await ClassAPI.findClassByClass(numberClass)
@@ -28,6 +28,7 @@ router.post('/', async(req, res) => {
                 adminClass: dataClass.adminLogin,
                 summa: summa,
                 date: date,
+                date: ticket,
             }
             await CalendarFoodModelAPI.createCalendarFood(newCalendarData)
             res.sendStatus(200)
