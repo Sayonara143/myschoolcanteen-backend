@@ -56,7 +56,7 @@ const createNotice = (noticeData) => {
 }
 
 const UpdateNotice = (list) => {
-    return NoticeDayModel.updateMany({ login: login, date: list.date }, { list }, { upsert: true, multi: true })
+    return NoticeDayModel.updateMany({ login: list.login, date: list.date }, { list }, { upsert: true, multi: true })
 }
 
 const findAllNoticeUsers = (login) => {
