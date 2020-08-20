@@ -11,11 +11,13 @@ import getSettings from './getSettings'
 import change from './changeUsersData/router'
 import createNotice from './noticeDayWhenEat'
 import updateNotice from './updateNoticeDayWhenEat'
+import getNotice from './getNoticeDay'
 
 import out from './out'
 
 router.use('/createnotice', createNotice);
 router.use('/updatenotice', updateNotice);
+router.use('/getnotice', getNotice);
 router.use('/change', change);
 router.use('/sync', sync);
 router.use('/settings', getSettings);

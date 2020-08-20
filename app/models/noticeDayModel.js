@@ -65,6 +65,10 @@ const UpdateNotice = (list) => {
 const findAllNoticeUsers = (login) => {
     return NoticeDayModel.find({ Login: login }, { __v: 0, _id: 0 })
 }
+const findNoticeUser = (list) => {
+    return NoticeDayModel.findOne({ user: list.user, date: list.date }, { __v: 0, _id: 0, user: 0, adminLogin: 0, date: 0 })
+}
+
 const findAllNoticeAdmin = (adminlogin, date) => {
     return NoticeDayModel.find({ adminLogin: adminlogin, date: date }, { __v: 0, _id: 0 })
 }
@@ -74,5 +78,6 @@ export {
     createNotice,
     findAllNoticeUsers,
     findAllNoticeAdmin,
-    UpdateNotice
+    UpdateNotice,
+    findNoticeUser
 }
