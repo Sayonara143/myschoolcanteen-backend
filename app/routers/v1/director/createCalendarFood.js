@@ -28,7 +28,7 @@ router.post('/', async(req, res) => {
                 adminClass: dataClass.adminLogin,
                 summa: summa,
                 date: date,
-                date: ticket,
+                ticket: ticket,
             }
             await CalendarFoodModelAPI.createCalendarFood(newCalendarData)
             res.sendStatus(200)
