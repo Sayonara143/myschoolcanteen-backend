@@ -9,11 +9,13 @@ import UpdateUsersBalance from './updateUsersBalance';
 import sync from './sync'
 import getSettings from './getSettings'
 import change from './changeUsersData/router'
-import notice from './noticeDayWhenEat'
+import createNotice from './noticeDayWhenEat'
+import updateNotice from './updateNoticeDayWhenEat'
 
 import out from './out'
 
-router.use('/notice', notice);
+router.use('/createnotice', createNotice);
+router.use('/updatenotice', updateNotice);
 router.use('/change', change);
 router.use('/sync', sync);
 router.use('/settings', getSettings);

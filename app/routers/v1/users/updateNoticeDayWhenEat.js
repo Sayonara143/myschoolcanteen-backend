@@ -23,7 +23,7 @@ router.post('/', async(req, res) => {
                 flag: data.flag,
                 date: data.date
             }
-            await NoticeApi.createNotice(newNoticeData)
+            await NoticeApi.UpdateNotice(newNoticeData)
             res.sendStatus(200);
         } catch (error) {
             res.sendStatus(500);
