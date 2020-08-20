@@ -4,24 +4,27 @@ const router = express.Router();
 
 
 
-router.post('/', async (req,res) => {
+router.post('/', async(req, res) => {
     const user = req.user;
     const data = req.body;
-    if(data.flag === null  || data.date === null){
+    if (data.flag === null || data.date === null) {
         res.json("empty data")
-    }
-    else{
-        try{
+    } else {
+        try {
             const newNoticeData = {
-                login: user.login, 
-                adminLogin: user.admin, 
+                user: {
+                    name: user.name,
+                    surname: user.surname,
+                    patronymic: user.patronymic,
+                },
+                login: user.login,
+                adminLogin: user.admin,
                 flag: data.flag,
                 date: data.date
             }
             await NoticeApi.createNotice(newNoticeData)
             res.sendStatus(200);
-        }
-        catch(error){
+        } catch (error) {
             res.sendStatus(500);
             console.log(error.message);
         }
