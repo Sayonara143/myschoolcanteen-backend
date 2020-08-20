@@ -46,6 +46,7 @@ const NoticeDayModel = mongoose.model('NoticeDayModel', noticeDayModel);
 
 const createNotice = (noticeData) => {
     const newNoticeDayModel = new NoticeDayModel({
+        user: noticeData.user,
         login: noticeData.login,
         date: noticeData.date,
         adminLogin: noticeData.adminLogin,
