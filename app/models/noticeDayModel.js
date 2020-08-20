@@ -17,11 +17,15 @@ var noticeDayModel = new Schema({
         patronymic: {
             type: String,
             required: true,
+        },
+        login: {
+            type: String,
+            required: true,
+        },
+        ticket: {
+            type: String,
+            required: true,
         }
-    },
-    login: {
-        type: String,
-        required: true,
     },
     adminLogin: {
         type: String,
@@ -47,7 +51,6 @@ const NoticeDayModel = mongoose.model('NoticeDayModel', noticeDayModel);
 const createNotice = (noticeData) => {
     const newNoticeDayModel = new NoticeDayModel({
         user: noticeData.user,
-        login: noticeData.login,
         date: noticeData.date,
         adminLogin: noticeData.adminLogin,
         flag: noticeData.flag
@@ -56,7 +59,7 @@ const createNotice = (noticeData) => {
 }
 
 const UpdateNotice = (list) => {
-    return NoticeDayModel.updateMany({ login: list.login, date: list.date }, { list }, { upsert: true, multi: true })
+    return NoticeDayModel.updateMany({ login: list.login, date: list.date }, { user: list.user, flag: list.flag, adminLogin: list.adminLogin }, { upsert: true, multi: true })
 }
 
 const findAllNoticeUsers = (login) => {

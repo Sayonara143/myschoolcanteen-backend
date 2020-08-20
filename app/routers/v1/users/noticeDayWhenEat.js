@@ -16,8 +16,9 @@ router.post('/', async(req, res) => {
                     name: user.name,
                     surname: user.surname,
                     patronymic: user.patronymic,
+                    login: user.login,
+                    ticket: user.ticket,
                 },
-                login: user.login,
                 adminLogin: user.admin,
                 flag: data.flag,
                 date: data.date
