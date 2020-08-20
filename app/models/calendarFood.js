@@ -50,11 +50,19 @@ const findAllCalendarFoodClassNoInfa = (adminClass) => {
 const findAllCalendarFood = () => {
     return CalendarFoodModel.find({}, { __v0: 0 })
 }
+const findCalendarFoodByDateAndAdmin = (date, adminClass) => {
+    return CalendarFoodModel.findOne({ adminClass: adminClass, date: date }, { upsert: false })
+}
 
+const UpdateCalendarFood = (list) => {
+    return CalendarFoodModel.updateMany({ adminClass: list.adminClass, date: list.date }, { eat: list.eat, summa: list.price }, { upsert: false })
+}
 
 export {
     findAllCalendarFoodClass,
     createCalendarFood,
     findAllCalendarFood,
-    findAllCalendarFoodClassNoInfa
+    findAllCalendarFoodClassNoInfa,
+    UpdateCalendarFood,
+    findCalendarFoodByDateAndAdmin
 }
