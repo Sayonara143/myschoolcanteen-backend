@@ -3,7 +3,8 @@ const router = express.Router();
 
 
 import getAllCalendarFoodClass from './getAllCalendarFoodClass'
-import UpdateUsersBalance  from './updateUsersBalance';
+import getFoodByData from './getFoodByData'
+import UpdateUsersBalance from './updateUsersBalance';
 //import getYourBalance from './getYourBalance'; look in sync 
 import sync from './sync'
 import getSettings from './getSettings'
@@ -19,7 +20,8 @@ router.use('/settings', getSettings);
 router.use('/updateUsersBalance', UpdateUsersBalance);
 //router.use('/getYourBalance', getYourBalance); look in sync
 router.use('/getAllCalendarFoodClass', getAllCalendarFoodClass);
+router.use('/getFood', getFoodByData);
 
 router.use('/out', out)
 
-export default router 
+export default router
