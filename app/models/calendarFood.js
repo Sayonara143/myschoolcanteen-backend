@@ -60,7 +60,7 @@ const findCalendarFoodByDateAndAdminAndTicket = (date, adminClass, ticket) => {
 }
 
 const UpdateCalendarFood = (list) => {
-    return CalendarFoodModel.updateMany({ adminClass: list.adminClass, date: list.date, ticket: list.ticket }, { eat: list.eat, summa: list.price }, { upsert: false })
+    return CalendarFoodModel.updateMany({ adminClass: list.adminClass, date: list.date, ticket: list.ticket }, { eat: list.eat, summa: list.summa }, { upsert: false })
 }
 
 export {
