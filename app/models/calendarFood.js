@@ -48,8 +48,8 @@ const findAllCalendarFoodClass = (adminClass) => {
     return CalendarFoodModel.find({ adminClass: adminClass }, { __v0: 0 })
 }
 
-const findAllCalendarFoodClassNoInfa = (adminClass) => {
-    return CalendarFoodModel.find({ adminClass: adminClass }, { __v0: 0 })
+const findAllCalendarFoodClassNoInfa = (adminClass, ticket) => {
+    return CalendarFoodModel.find({ adminClass: adminClass, ticket: ticket }, { __v0: 0 })
 }
 
 const findAllCalendarFood = () => {
