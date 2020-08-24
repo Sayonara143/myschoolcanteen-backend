@@ -7,16 +7,16 @@ const router = express.Router();
 
 let newNoticeData;
 router.post('/', async(req, res) => {
-    let d = new Date;
-    d.setHours(12)
     const user = req.user;
     const data = req.body;
+    let d = data.date
+    d.setHours(12, 0, 0, 0)
     if (data.flag === null || data.date === null) {
         res.json("empty data")
     } else {
         try {
-          console.log(data.date + '----' + d)
-          if (new Date(data.date) > d) {
+          console.log(new Date(d) + '----' + new Date())
+          if (new Date(d) > new Date()) {
             if (data.flag === true) {
               const food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(data.date, user.admin, user.ticket)
               if (food.summa > user.balance) {
