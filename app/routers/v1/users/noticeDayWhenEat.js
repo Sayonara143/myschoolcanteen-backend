@@ -10,13 +10,15 @@ router.post('/', async(req, res) => {
     const user = req.user;
     const data = req.body;
     let d = data.date
+    let d2 = new Date()
+    d2.setHours(d2.getHours() + 5)
     d.setHours(12, 0, 0, 0)
     if (data.flag === null || data.date === null) {
         res.json("empty data")
     } else {
         try {
-          console.log(new Date(d) + '----' + new Date())
-          if (new Date(d) > new Date()) {
+          console.log(new Date(d) + '----' + new Date(d2))
+          if (new Date(d) > new Date(d2)) {
             if (data.flag === true) {
               const food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(data.date, user.admin, user.ticket)
               if (food.summa > user.balance) {
