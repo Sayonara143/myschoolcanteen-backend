@@ -23,7 +23,7 @@ router.post('/', async (req,res) => {
             res.status(400).json({error: "number class is undefinded"})
         }
     }
-    catch(error){
+    catch(error){ 
         console.log(error.message);
         res.status(500);
     }
