@@ -34,7 +34,7 @@ router.post('/', async(req, res) => {
               await UserApi.UpdateUsersBalance(user.login, uBalance)
             }
           } else {
-            const uBalance = user.balance + food.summa
+            const uBalance = Number(user.balance) + Number(food.summa)
             newNoticeData = {
               user: {
                 name: user.name,
