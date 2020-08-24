@@ -1,9 +1,11 @@
 import express from 'express'
 import * as NoticeApi from '../../../models/noticeDayModel'
+import * as CalendarFoodModelAPI from '../../../models/calendarFood'
+import * as UserApi from '../../../models/usersModel'
 const router = express.Router();
 
 
-
+let newNoticeData;
 router.post('/', async(req, res) => {
     const user = req.user;
     const data = req.body;
