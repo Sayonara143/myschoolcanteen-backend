@@ -9,7 +9,7 @@ let newNoticeData;
 router.post('/', async(req, res) => {
     const user = req.user;
     const data = req.body;
-    let d = data.date
+    let d = new Date(data.date)
     let d2 = new Date()
     d2.setHours(d2.getHours() + 5)
     d.setHours(12, 0, 0, 0)
