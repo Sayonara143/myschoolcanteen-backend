@@ -16,7 +16,7 @@ router.post('/', async(req, res) => {
     } else {
         try {
           console.log(data.date + '----' + d)
-          if (data.date > d) {
+          if (new Date(data.date) > d) {
             if (data.flag === true) {
               const food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(data.date, user.admin, user.ticket)
               if (food.summa > user.balance) {
