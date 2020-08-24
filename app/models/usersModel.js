@@ -82,8 +82,8 @@ const deleteUserByLogin =(login)=>{
 const UpdateUsersBalance = (login,balance) => {
 	return UsersModel.updateOne({login:login},{balance:balance}, {upsert: false})
 }
-// settings change users
 
+// settings change users
 const UpdateUsersPasswordHashSalt = (login, passwordHash, salt) => {
 	return UsersModel.updateOne({login:login},{passwordHash:passwordHash,salt:salt }, {upsert: false, multi: true})
 }
