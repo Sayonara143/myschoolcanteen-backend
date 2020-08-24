@@ -9,12 +9,12 @@ let newNoticeData;
 router.post('/', async(req, res) => {
     const user = req.user;
     const data = req.body;
+    const food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(data.date, user.admin, user.ticket)
     if (data.flag === null || data.date === null) {
         res.json("empty data")
     } else {
         try {
           if (data.flag === true) {
-            const food = await CalendarFoodModelAPI.findCalendarFoodByDateAndAdminAndTicket(data.date, user.admin, user.ticket)
             if (food.summa > user.balance) {
               res.sendStatus(501)
             } else{
